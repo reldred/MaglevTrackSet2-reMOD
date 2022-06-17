@@ -1,0 +1,72 @@
+// U-type MBAHN Three phase - LAAT
+#define LAXS \
+	"LAAT", \
+	"LAAS", "LABS", "LACS", "LADS", "LAES", \
+	"LBAS", "LBBS", "LBCS", "LBDS", "LBES", \
+	"LCAS", "LCBS", "LCCS", "LCDS", "LCES"
+	
+// U-type EDS - SC-Maglev - LCAE - LCAI
+#define LXXE \
+	"LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"	
+	
+// Monorail urban induction - Linimo - LBA3, LBAT - TBAI
+#define LXX4 \
+	"LBA3", \
+	"TAAI", "TBAI", "TCAI", \
+	"TABI", "TBBI", "TCBI", \
+	"TACI", "TBCI", "TCCI", \
+	"TADI", "TBDI", "TCDI", \
+	"TAEI", "TBEI", "TCEI"
+#define LXX3 \
+	"LBA3", \
+	"TAAI", "TBAI", \
+	"TABI", "TBBI", \
+	"TACI", "TBCI", \
+	"TADI", "TBDI", \
+	"TAEI", "TBEI"
+	
+// Monorail highspeed induction - SUMA - LCA3 - TCAI
+#define TCXI \
+	"TCAI", "TCBI", "TCCI", "TCDI", "TCEI"
+	
+// Monorail highspeed synchronous - Transrapid - LCAT - TCAS
+#define LCXT \
+	"LCAT", \
+	"TCAS", "TCBS", "TCCS", "TCDS", "TCES", \
+	"TCAT", "TCBT", "TCCT", "TCDT", "TCET"
+	
+// Monorail highspeed synchronous - Maglev 3.0 - TBAS
+#define TBXS \
+	"TBAT", "TBBT", "TBCT", "TBDT", "TBET", \
+	"TBAS", "TBBS", "TBCS", "TBDS", "TBES"
+#define TBXS2 \
+	"LCAT", "LBA3", \
+	"TCAS", "TCBS", "TCCS", "TCDS", "TCES", \
+	"TCAT", "TCBT", "TCCT", "TCDT", "TCET", \
+	"TBAI", "TBBI", "TBCI", "TBDI", "TBEI", \
+	"TAAI", "TABI", "TACI", "TADI", "TAEI"
+
+//Compatibility	
+#define LBAS_TABLE [LAXS]
+#define TCAS_TABLE [LCXT]
+#define TBAI_TABLE [LXX3]
+#define TBAI2_TABLE [LXX4]
+#define TBAI2_M_TABLE ["MGLV", LXX4]
+#define TBAS_TABLE [TBXS]
+#define TBAS2_TABLE [TBXS, TBXS2]
+#define TBAS2_M_TABLE ["MGLV", TBXS, TBXS2]
+#define TCAI_TABLE [TCXI]
+#define LCAI_TABLE [LXXE]
+#define LBAS_M_TABLE ["MGLV", LAXS]
+#define TCAS_M_TABLE ["MGLV", LCXT]
+#define TBAI_M_TABLE ["MGLV", LXX3]
+#define TBAI2_M_TABLE ["MGLV", LXX4]
+#define TCAI_M_TABLE ["MGLV", TCXI]
+#define LCAI_M_TABLE ["MGLV", LXXE]
+
+//Labels
+#define LBAS_ID LBAS
+#define TBAI_ID TBAI
+#define TCAI_ID TCAI
+#define TCAS_ID TCAT
+#define LCAI_ID LCAI

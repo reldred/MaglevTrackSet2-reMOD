@@ -1,0 +1,332 @@
+#define COSTPARAM(basecost,param) (param == 0) ? basecost/4 : (param == 1) ? basecost/2 : (param == 3) ? basecost*2 : (param == 4) ? basecost*4 : basecost
+
+grf {
+	grfid:	"EN\02\02";
+	name:	string(STR_GRF_NAME);
+	desc:	string(STR_GRF_DESC);
+	version:	8;
+	min_compatible_version: 1;
+	param {
+		PARAM_CC {
+			type:	bool;
+			name:	string(STR_PARAM_CC);
+			desc:	string(STR_PARAM_CC_DESC);
+			def_value: 0;
+		}
+	}
+	param {
+		PARAM_HS_CONST {
+			type:    int;
+			name:    string(STR_HSC);
+			desc:    string(STR_CON_DESC);
+			min_value: 0;
+			max_value: 4;
+			def_value: 2;
+			names: {
+				0: string(STR_MC_0);
+				1: string(STR_MC_1);
+				2: string(STR_MC_2);
+				3: string(STR_MC_3);
+				4: string(STR_MC_4);
+			};
+		}
+	}
+	param {
+		PARAM_MS_CONST {
+			type:    int;
+			name:    string(STR_MSC);
+			desc:    string(STR_CON_DESC);
+			min_value: 0;
+			max_value: 4;
+			def_value: 2;
+			names: {
+				0: string(STR_MC_0);
+				1: string(STR_MC_1);
+				2: string(STR_MC_2);
+				3: string(STR_MC_3);
+				4: string(STR_MC_4);
+			};
+		}
+	}
+	param {
+		PARAM_HS_MAINT {
+			type:    int;
+			name:    string(STR_HSM);
+			desc:    string(STR_MAINT_DESC);
+			min_value: 0;
+			max_value: 4;
+			def_value: 2;
+			names: {
+				0: string(STR_MC_0);
+				1: string(STR_MC_1);
+				2: string(STR_MC_2);
+				3: string(STR_MC_3);
+				4: string(STR_MC_4);
+			};
+		}
+	}
+	param {
+		PARAM_MS_MAINT {
+			type:    int;
+			name:    string(STR_MSM);
+			desc:    string(STR_MAINT_DESC);
+			min_value: 0;
+			max_value: 4;
+			def_value: 2;
+			names: {
+				0: string(STR_MC_0);
+				1: string(STR_MC_1);
+				2: string(STR_MC_2);
+				3: string(STR_MC_3);
+				4: string(STR_MC_4);
+			};
+		}
+	}
+	param {
+		PARAM_NO_FENCE {
+			type:    int;
+			name:    string(STR_FENCE);
+			desc:    string(STR_FENCE_DESC);
+			min_value: 0;
+			max_value: 3;
+			def_value: 0;
+			names: {
+				0: string(STR_FENCE_1);
+				1: string(STR_FENCE_2);
+				2: string(STR_FENCE_3);
+				3: string(STR_FENCE_4);
+			};
+		}
+	}
+	param {
+		PARAM_MGLV {
+			type:    int;
+			name:    string(STR_PARAM_MGLV);
+			desc:    string(STR_PARAM_MGLV_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 1;
+			names: {
+				1: string(STR_PARAM_TCAS);
+				2: string(STR_PARAM_LCAI);
+				3: string(STR_PARAM_TCAI);
+				4: string(STR_PARAM_TBAI);
+				5: string(STR_PARAM_LBAS);
+			};
+		}
+	}
+	param {
+		PARAM_TCAS {
+			type:	bool;
+			name:	string(STR_PARAM_TCAS);
+			desc:	string(STR_PARAM_TRACK_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_LCAI {
+			type:	bool;
+			name:	string(STR_PARAM_LCAI);
+			desc:	string(STR_PARAM_TRACK_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_TCAI {
+			type:	bool;
+			name:	string(STR_PARAM_TCAI);
+			desc:	string(STR_PARAM_TRACK_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_TBAI {
+			type:	bool;
+			name:	string(STR_PARAM_TBAI);
+			desc:	string(STR_PARAM_TRACK_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_LBAS {
+			type:	bool;
+			name:	string(STR_PARAM_LBAS);
+			desc:	string(STR_PARAM_TRACK_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_DEPOT_TCAS {
+			type:    int;
+			name:    string(STR_PARAM_TCAS_DEPOT);
+			desc:    string(STR_PARAM_DEPOT_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 1;
+			names: {
+				1: string(STR_PARAM_TCAS_DEP);
+				2: string(STR_PARAM_LCAI_DEP);
+				3: string(STR_PARAM_TCAI_DEP);
+				4: string(STR_PARAM_TBAI_DEP);
+				5: string(STR_PARAM_LBAS_DEP);
+			};
+		}
+	}
+	param {
+		PARAM_DEPOT_LCAI {
+			type:    int;
+			name:    string(STR_PARAM_LCAI_DEPOT);
+			desc:    string(STR_PARAM_DEPOT_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 2;
+			names: {
+				1: string(STR_PARAM_TCAS_DEP);
+				2: string(STR_PARAM_LCAI_DEP);
+				3: string(STR_PARAM_TCAI_DEP);
+				4: string(STR_PARAM_TBAI_DEP);
+				5: string(STR_PARAM_LBAS_DEP);
+			};
+		}
+	}
+	param {
+		PARAM_DEPOT_TCAI {
+			type:    int;
+			name:    string(STR_PARAM_TCAI_DEPOT);
+			desc:    string(STR_PARAM_DEPOT_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 3;
+			names: {
+				1: string(STR_PARAM_TCAS_DEP);
+				2: string(STR_PARAM_LCAI_DEP);
+				3: string(STR_PARAM_TCAI_DEP);
+				4: string(STR_PARAM_TBAI_DEP);
+				5: string(STR_PARAM_LBAS_DEP);
+			};
+		}
+	}
+	param {
+		PARAM_DEPOT_TBAI {
+			type:    int;
+			name:    string(STR_PARAM_TBAI_DEPOT);
+			desc:    string(STR_PARAM_DEPOT_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 4;
+			names: {
+				1: string(STR_PARAM_TCAS_DEP);
+				2: string(STR_PARAM_LCAI_DEP);
+				3: string(STR_PARAM_TCAI_DEP);
+				4: string(STR_PARAM_TBAI_DEP);
+				5: string(STR_PARAM_LBAS_DEP);
+			};
+		}
+	}
+	param {
+		PARAM_DEPOT_LBAS {
+			type:    int;
+			name:    string(STR_PARAM_LBAS_DEPOT);
+			desc:    string(STR_PARAM_DEPOT_DESC);
+			min_value: 1;
+			max_value: 5;
+			def_value: 5;
+			names: {
+				1: string(STR_PARAM_TCAS_DEP);
+				2: string(STR_PARAM_LCAI_DEP);
+				3: string(STR_PARAM_TCAI_DEP);
+				4: string(STR_PARAM_TBAI_DEP);
+				5: string(STR_PARAM_LBAS_DEP);
+			};
+		}
+	}
+	param {
+		PARAM_BRICK_TUNNEL {
+			type:	bool;
+			name:	string(STR_PARAM_BRICK_TUNNEL);
+			desc:	string(STR_PARAM_BRICK_TUNNEL_DESC);
+			def_value: 0;
+		}
+	}
+	param {
+		PARAM_URBAN {
+			type:	bool;
+			name:	string(STR_PARAM_URBAN);
+			desc:	string(STR_PARAM_URBAN_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PARAM_AS_CONST {
+			type:    int;
+			name:    string(STR_ASC);
+			desc:    string(STR_ASC_DESC);
+			min_value: 0;
+			max_value: 24;
+			def_value: 8;
+			names: {
+				0: string(STR_AC_M8);
+				1: string(STR_AC_M7);
+				2: string(STR_AC_M6);
+				3: string(STR_AC_M5);
+				4: string(STR_AC_M4);
+				5: string(STR_AC_M3);
+				6: string(STR_AC_M2);
+				7: string(STR_AC_M1);
+				8: string(STR_AC_0);
+				9: string(STR_AC_1);
+				10: string(STR_AC_2);
+				11: string(STR_AC_3);
+				12: string(STR_AC_4);
+				13: string(STR_AC_5);
+				14: string(STR_AC_6);
+				15: string(STR_AC_7);
+				16: string(STR_AC_8);
+				17: string(STR_AC_9);
+				18: string(STR_AC_10);
+				19: string(STR_AC_11);
+				20: string(STR_AC_12);
+				21: string(STR_AC_13);
+				22: string(STR_AC_14);
+				23: string(STR_AC_15);
+				24: string(STR_AC_16);
+			};
+		}
+	}
+	param {
+		PARAM_AS_MAINT {
+			type:    int;
+			name:    string(STR_ASM);
+			min_value: 0;
+			max_value: 24;
+			def_value: 8;
+			names: {
+				0: string(STR_AC_M8);
+				1: string(STR_AC_M7);
+				2: string(STR_AC_M6);
+				3: string(STR_AC_M5);
+				4: string(STR_AC_M4);
+				5: string(STR_AC_M3);
+				6: string(STR_AC_M2);
+				7: string(STR_AC_M1);
+				8: string(STR_AC_0);
+				9: string(STR_AC_1);
+				10: string(STR_AC_2);
+				11: string(STR_AC_3);
+				12: string(STR_AC_4);
+				13: string(STR_AC_5);
+				14: string(STR_AC_6);
+				15: string(STR_AC_7);
+				16: string(STR_AC_8);
+				17: string(STR_AC_9);
+				18: string(STR_AC_10);
+				19: string(STR_AC_11);
+				20: string(STR_AC_12);
+				21: string(STR_AC_13);
+				22: string(STR_AC_14);
+				23: string(STR_AC_15);
+				24: string(STR_AC_16);
+			};
+		}
+	}
+}

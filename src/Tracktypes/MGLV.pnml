@@ -1,0 +1,248 @@
+//GFX:
+spriteset (HSM_tunnel_overlay_1, "grf/HSM_Tunnel.png") {
+	tmpl_tunnel_overlays(0)
+}
+spriteset (HSM_tunnel_overlay_2, "grf/HSM_Tunnel_2.png") {
+	tmpl_tunnel_overlays(0)
+}
+switch(FEAT_RAILTYPES, SELF, sw_HSM_tunnel_overlay_2, grf_future_status("EN\10\02")) {
+	1: HSM_tunnel_overlay_2;
+	0: HSM_tunnel_overlay_1;
+}
+switch(FEAT_RAILTYPES, SELF, sw_HSM_tunnel_overlay_1, grf_current_status("EN\10\02")) {
+	1: HSM_tunnel_overlay_2;
+	0: sw_HSM_tunnel_overlay_2;
+}
+switch(FEAT_RAILTYPES, SELF, HSM_tunnel_overlay, PARAM_BRICK_TUNNEL) {
+	1: HSM_tunnel_overlay_2;
+	0: sw_HSM_tunnel_overlay_1;
+}
+
+spriteset (UM_tunnel_overlay, "grf/LSM_Tunnel.png") {
+	tmpl_tunnel_overlays(0)
+}
+spriteset (HSM_fences, "grf/Fences.png") {
+	tmpl_fences(50)
+}
+spriteset (UM_fences, "grf/Fences.png") {
+	tmpl_fences(0)
+}
+spriteset (NO_fences, "grf/Fences.png") {
+	tmpl_no_fences()
+}
+switch(FEAT_RAILTYPES, SELF, switch_NO_HSM_FENCE, PARAM_NO_FENCE){
+	0..1: NO_fences;
+	2..3: HSM_fences;
+}
+switch(FEAT_RAILTYPES, SELF, switch_NO_UM_FENCE, PARAM_NO_FENCE){
+	0: NO_fences;
+	1: UM_fences;
+	2: NO_fences;
+	3: UM_fences;
+}
+
+
+switch(FEAT_RAILTYPES, SELF, switch_TCAS_depot, PARAM_CC){
+	1: TCAS_depot;
+	0: TCAS_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_depot, PARAM_CC){
+	1: LCAI_depot;
+	0: LCAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAI_depot, PARAM_CC){
+	1: TCAI_depot;
+	0: TCAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_depot, PARAM_CC){
+	1: TBAI_depot;
+	0: TBAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_depot, PARAM_CC){
+	1: LBAS_depot;
+	0: LBAS_depot_nocc;
+}
+
+ //TCAS
+spriteset (TCAS_underlay, "grf/TCAS.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (TCAS_overlay, "grf/TCAS.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (TCAS_bridge, "grf/TCAS.png") {
+	tmpl_bridges_overlay()
+}
+spriteset (TCAS_tunnel, "grf/HSM_Tunnel.png") {
+	tmpl_tunnel_overlaytracks(80)
+}
+spriteset (TCAS_gui, "grf/TCAS_GUI.png") {
+	tmpl_gui()
+}
+spriteset (TCAS_depot, "grf/TCAS_Depot.png") {
+	tmpl_depot(0)
+}
+spriteset (TCAS_depot_nocc, "grf/TCAS_Depot_NOCC.png") {
+	tmpl_depot(0)
+}
+
+switch(FEAT_RAILTYPES, SELF, switch_depot_TCAS, PARAM_DEPOT_TCAS){
+	1: switch_TCAS_depot;
+	2: switch_LCAI_depot;
+	3: switch_TCAI_depot;
+	4: switch_TBAI_depot;
+	5: switch_LBAS_depot;
+}
+
+ //LCAI
+spriteset (LCAI_underlay, "grf/LCAI.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (LCAI_overlay, "grf/LCAI.png") {
+	tmpl_overlay_track_types_EDS()
+}
+spriteset (LCAI_bridge, "grf/LCAI.png") {
+	tmpl_bridges_overlay()
+}
+spriteset (LCAI_tunnel, "grf/HSM_Tunnel.png") {
+	tmpl_tunnel_overlaytracks(40)
+}
+spriteset (LCAI_gui, "grf/LCAI_GUI.png") {
+	tmpl_gui()
+}
+spriteset (LCAI_depot, "grf/LCAI_Depot.png") {
+	tmpl_depot(8)
+}
+spriteset (LCAI_depot_nocc, "grf/LCAI_Depot_NOCC.png") {
+	tmpl_depot(8)
+}
+
+switch(FEAT_RAILTYPES, SELF, switch_depot_LCAI, PARAM_DEPOT_LCAI){
+	1: switch_TCAS_depot;
+	2: switch_LCAI_depot;
+	3: switch_TCAI_depot;
+	4: switch_TBAI_depot;
+	5: switch_LBAS_depot;
+}
+
+
+ //TCAI
+spriteset (TCAI_underlay, "grf/TCAI.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (TCAI_overlay, "grf/TCAI.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (TCAI_bridge, "grf/TCAI.png") {
+	tmpl_bridges_overlay()
+}
+spriteset (TCAI_tunnel, "grf/HSM_Tunnel.png") {
+	tmpl_tunnel_overlaytracks(120)
+}
+spriteset (TCAI_gui, "grf/TCAI_GUI.png") {
+	tmpl_gui()
+}
+spriteset (TCAI_depot, "grf/TCAI_Depot.png") {
+	tmpl_depot(8)
+}
+spriteset (TCAI_depot_nocc, "grf/TCAI_Depot_NOCC.png") {
+	tmpl_depot(8)
+}
+
+switch(FEAT_RAILTYPES, SELF, switch_depot_TCAI, PARAM_DEPOT_TCAI){
+	1: switch_TCAS_depot;
+	2: switch_LCAI_depot;
+	3: switch_TCAI_depot;
+	4: switch_TBAI_depot;
+	5: switch_LBAS_depot;
+}
+
+ //TBAI
+spriteset (TBAI_underlay, "grf/TBAI.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (TBAI_overlay, "grf/TBAI.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (TBUI_underlay, "grf/TBUI.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (TBUI_overlay, "grf/TBUI.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (TBAI_bridge, "grf/TBAI.png") {
+	tmpl_bridges_overlay()
+}
+spriteset (TBAI_tunnel, "grf/LSM_Tunnel.png") {
+	tmpl_tunnel_overlaytracks(40)
+}
+spriteset (TBAI_gui, "grf/TBAI_GUI.png") {
+	tmpl_gui()
+}
+spriteset (TBAI_depot, "grf/TBAI_Depot.png") {
+	tmpl_depot(8)
+}
+spriteset (TBAI_depot_nocc, "grf/TBAI_Depot_NOCC.png") {
+	tmpl_depot(8)
+}
+
+switch(FEAT_RAILTYPES, SELF, switch_depot_TBAI,  PARAM_DEPOT_TBAI){
+	1: switch_TCAS_depot;
+	2: switch_LCAI_depot;
+	3: switch_TCAI_depot;
+	4: switch_TBAI_depot;
+	5: switch_LBAS_depot;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_underlay,  PARAM_URBAN){
+	0: TBAI_underlay;
+	1: TBUI_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_overlay,  PARAM_URBAN){
+	0: TBAI_overlay;
+	1: TBUI_overlay;
+}
+
+ //LBAS
+spriteset (LBAS_underlay, "grf/LBAS.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (LBAS_overlay, "grf/LBAS.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (LBUS_underlay, "grf/LBUS.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (LBUS_overlay, "grf/LBUS.png") {
+	tmpl_overlay_track_types()
+}
+spriteset (LBAS_bridge, "grf/LBAS.png") {
+	tmpl_bridges_overlay()
+}
+spriteset (LBAS_tunnel, "grf/LSM_Tunnel.png") {
+	tmpl_tunnel_overlaytracks(80)
+}
+spriteset (LBAS_gui, "grf/LBAS_GUI.png") {
+	tmpl_gui()
+}
+spriteset (LBAS_depot, "grf/LBAS_Depot.png") {
+	tmpl_depot(8)
+}
+spriteset (LBAS_depot_nocc, "grf/LBAS_Depot_NOCC.png") {
+	tmpl_depot(8)
+}
+
+switch(FEAT_RAILTYPES, SELF, switch_depot_LBAS, PARAM_DEPOT_LBAS){
+	1: switch_TCAS_depot;
+	2: switch_LCAI_depot;
+	3: switch_TCAI_depot;
+	4: switch_TBAI_depot;
+	5: switch_LBAS_depot;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_underlay,  PARAM_URBAN){
+	0: LBAS_underlay;
+	1: LBUS_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_overlay,  PARAM_URBAN){
+	0: LBAS_overlay;
+	1: LBUS_overlay;
+}

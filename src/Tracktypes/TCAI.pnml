@@ -1,0 +1,34 @@
+//SUMA Maglev Track
+item(FEAT_RAILTYPES, TCAI_ID, 13) {
+     property {
+         label:                      "TCAI";
+         name:                       string(STR_TCAI);
+         menu_text:                  string(STR_TCAI);
+         build_window_caption:       string(STR_TCAI_BUILD_CAPTION);
+         autoreplace_text:           string(STR_TCAI_AUTOREPLACE);
+         new_engine_text:            string(STR_TCAI_NEW_ENGINE);
+		 toolbar_caption:			 string(STR_TCAI_TB_CAPTION);
+         compatible_railtype_list:   TCAI_TABLE;
+         powered_railtype_list:      TBAI2_TABLE;
+		 alternative_railtype_list:  TCAI_TABLE;
+         railtype_flags:             bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+		 //introduction_date:			 date(1970,1,1);
+		 map_colour:				 165;
+         curve_speed_multiplier:     3;
+         station_graphics:           RAILTYPE_STATION_MAGLEV;                  // It's a maglev innit
+         construction_cost:          COSTPARAM(28,PARAM_HS_CONST);             // IDK I'll see
+         speed_limit:                1230 km/h;
+         acceleration_model:         ACC_MODEL_MAGLEV;                         // It's a maglev innit
+		 maintenance_cost:		     COSTPARAM(12,PARAM_HS_MAINT);     		   // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay:		TCAI_overlay;				// defines the sprites drawn as overlay for junctions and highlight
+         underlay:			TCAI_underlay;				// defines the usual tracks and the underlay for junctions
+         bridge_surfaces:	TCAI_bridge;				// defines the overlay drawn over bridges
+		 tunnels:			TCAI_tunnel;				// defines the tracks drawn on a funnel tile
+         depots:            switch_depot_TCAI;    				// defines the depot sprites
+		 gui:				TCAI_gui;					// defines the gui sprites
+		 tunnel_overlay:	HSM_tunnel_overlay;			// Custom Tunnel portals since v2
+         fences:          switch_NO_HSM_FENCE;             		// Custom Fences since v2
+     }
+ }

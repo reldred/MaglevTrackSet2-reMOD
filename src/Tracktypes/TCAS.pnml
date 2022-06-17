@@ -1,0 +1,34 @@
+//Transrapid Maglev Track
+item(FEAT_RAILTYPES, TCAS_ID, 15) {
+     property {
+         label:                      "TCAS";
+         name:                       string(STR_TCAS);
+         menu_text:                  string(STR_TCAS);
+         build_window_caption:       string(STR_TCAS_BUILD_CAPTION);
+         autoreplace_text:           string(STR_TCAS_AUTOREPLACE);
+         new_engine_text:            string(STR_TCAS_NEW_ENGINE);
+		 toolbar_caption:			 string(STR_TCAS_TB_CAPTION);
+         compatible_railtype_list:   TCAS_TABLE;
+         powered_railtype_list:      TCAS_TABLE;
+		 alternative_railtype_list:  TCAS_TABLE;
+         railtype_flags:             bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+		 //introduction_date:			 date(1970,1,1);
+		 map_colour:				 165;
+         curve_speed_multiplier:     3;
+         station_graphics:           RAILTYPE_STATION_MAGLEV;                  // It's a maglev innit
+         construction_cost:          COSTPARAM(28,PARAM_HS_CONST);             // IDK I'll see
+         speed_limit:                1230 km/h;
+         acceleration_model:         ACC_MODEL_MAGLEV;                         // It's a maglev innit
+		 maintenance_cost:		     COSTPARAM(12,PARAM_HS_MAINT);     		   // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay:		TCAS_overlay;				// defines the sprites drawn as overlay for junctions and highlight
+         underlay:			TCAS_underlay;				// defines the usual tracks and the underlay for junctions
+         bridge_surfaces:	TCAS_bridge;				// defines the overlay drawn over bridges
+		 tunnels:			TCAS_tunnel;				// defines the tracks drawn on a funnel tile
+         depots:            switch_depot_TCAS;    				// defines the depot sprites
+		 gui:				TCAS_gui;					// defines the gui sprites
+		 tunnel_overlay:	HSM_tunnel_overlay;			// Custom Tunnel portals since v2
+         fences:          switch_NO_HSM_FENCE;             		// Custom Fences since v2
+     }
+ }

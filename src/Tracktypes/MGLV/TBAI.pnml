@@ -1,0 +1,34 @@
+//Urban Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label:                      "MGLV";
+         name:                       string(STR_TBAI);
+         menu_text:                  string(STR_TBAI);
+         build_window_caption:       string(STR_TBAI_BUILD_CAPTION);
+         autoreplace_text:           string(STR_TBAI_AUTOREPLACE);
+         new_engine_text:            string(STR_TBAI_NEW_ENGINE);
+		 toolbar_caption:			 string(STR_TBAI_TB_CAPTION);
+         compatible_railtype_list:   TBAI_M_TABLE;
+         powered_railtype_list:      TBAI_M_TABLE;
+		 alternative_railtype_list:  TBAI_M_TABLE;
+         railtype_flags:             bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+		 //introduction_date:			 date(1970,1,1);
+		 map_colour:				 174;
+         curve_speed_multiplier:     3;
+         station_graphics:           RAILTYPE_STATION_MAGLEV;                  // It's a maglev innit
+         construction_cost:          COSTPARAM(12,PARAM_MS_CONST);             // IDK I'll see
+         speed_limit:                210 km/h;
+         acceleration_model:         ACC_MODEL_MAGLEV;                         // It's a maglev innit
+		 maintenance_cost:		     COSTPARAM(7,PARAM_MS_MAINT);			   // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay:		switch_TBAI_overlay;				// defines the sprites drawn as overlay for junctions and highlight
+         underlay:			switch_TBAI_underlay;				// defines the usual tracks and the underlay for junctions
+         bridge_surfaces:	TBAI_bridge;				// defines the overlay drawn over bridges
+		 tunnels:			TBAI_tunnel;				// defines the tracks drawn on a funnel tile
+         depots:            switch_depot_TBAI;    				// defines the depot sprites
+		 gui:				TBAI_gui;					// defines the gui sprites
+		 tunnel_overlay:	UM_tunnel_overlay;			// Custom Tunnel portals since v2
+         fences:          switch_NO_UM_FENCE;             		// Custom Fences since v2
+     }
+ }

@@ -1,0 +1,35 @@
+//SC Maglev Track
+
+item(FEAT_RAILTYPES, LCAI_ID, 14) {
+     property {
+         label:                      "LCAI";
+         name:                       string(STR_LCAI);
+         menu_text:                  string(STR_LCAI);
+         build_window_caption:       string(STR_LCAI_BUILD_CAPTION);
+         autoreplace_text:           string(STR_LCAI_AUTOREPLACE);
+         new_engine_text:            string(STR_LCAI_NEW_ENGINE);
+		 toolbar_caption:			 string(STR_LCAI_TB_CAPTION);
+         compatible_railtype_list:   LCAI_TABLE;
+         powered_railtype_list:      LCAI_TABLE;
+		 alternative_railtype_list:  LCAI_TABLE;
+         railtype_flags:             bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+		 //introduction_date:			 date(1970,1,1);
+		 map_colour:				 165;
+         curve_speed_multiplier:     3;
+         station_graphics:           RAILTYPE_STATION_MAGLEV;                  
+         construction_cost:          COSTPARAM(28,PARAM_HS_CONST);             
+         speed_limit:                1230 km/h;
+         acceleration_model:         ACC_MODEL_MAGLEV;                        
+		 maintenance_cost:		     COSTPARAM(12,PARAM_HS_MAINT);     		   
+     }
+     graphics {
+         track_overlay:		LCAI_overlay;		
+         underlay:			LCAI_underlay;		
+         bridge_surfaces:	LCAI_bridge;			
+		 tunnels:			LCAI_tunnel;				// Custom Tunnel portals since v2
+         depots:            switch_depot_LCAI;    		// Custom Depots
+		 gui:				LCAI_gui;					
+		 tunnel_overlay:	HSM_tunnel_overlay;			// Custom Tunnel portals since v2		 
+         fences:          switch_NO_HSM_FENCE;          // Custom Fences since v2
+     }
+ }

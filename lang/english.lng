@@ -1,0 +1,131 @@
+##grflangid 0x01
+# 0x01 -> English
+
+# General GRF strings
+STR_GRF_NAME	:Maglev Track Set 2.6
+STR_GRF_DESC	:This set is the second installment of the Maglev Track Set, a track set that allows the user to separate their various maglev trains on different types of tracks for extra realism. {}{BLACK} {}{COPYRIGHT}2018-2022 Erato Nysiad{}Urban ground from the JapanSet crew.{}License:GPL v2
+
+# Track strings
+STR_LBAS				:M-Bahn
+STR_LBAS_BUILD_CAPTION	:New M-Bahn Vehicles
+STR_LBAS_AUTOREPLACE	:M-Bahn Vehicles
+STR_LBAS_NEW_ENGINE		:M-Bahn
+STR_LBAS_TB_CAPTION		:M-Bahn
+
+STR_TCAS 				:Transrapid Maglev
+STR_TCAS_BUILD_CAPTION :New Transrapid Maglev Vehicles
+STR_TCAS_AUTOREPLACE 	:Transrapid Maglev Vehicles
+STR_TCAS_NEW_ENGINE 	:Transrapid maglev
+STR_TCAS_TB_CAPTION 	:Transrapid Maglev
+
+STR_TBAI 				:Urban Maglev
+STR_TBAI_BUILD_CAPTION :New Urban Maglev Vehicles
+STR_TBAI_AUTOREPLACE 	:Urban Maglev Vehicles
+STR_TBAI_NEW_ENGINE 	:Urban maglev
+STR_TBAI_TB_CAPTION 	:Urban Maglev
+
+STR_TBAS 				:Intercity Maglev
+STR_TBAS_BUILD_CAPTION :New Intercity Maglev Vehicles
+STR_TBAS_AUTOREPLACE 	:Intercity Maglev Vehicles
+STR_TBAS_NEW_ENGINE 	:Intercity maglev
+STR_TBAS_TB_CAPTION 	:Intercity Maglev
+
+STR_TCAI 				:SUMA Maglev
+STR_TCAI_BUILD_CAPTION :New SUMA Maglev Vehicles
+STR_TCAI_AUTOREPLACE 	:SUMA Maglev Vehicles
+STR_TCAI_NEW_ENGINE 	:SUMA maglev
+STR_TCAI_TB_CAPTION 	:SUMA Maglev
+
+STR_LCAI 				:SC-Maglev
+STR_LCAI_BUILD_CAPTION  :New SC-Maglev Vehicles
+STR_LCAI_AUTOREPLACE 	:SC-Maglev Vehicles
+STR_LCAI_NEW_ENGINE 	:SC-Maglev
+STR_LCAI_TB_CAPTION 	:SC-Maglev
+
+
+# Parameter Strings
+STR_MC_0				:/4
+STR_MC_1				:/2
+STR_MC_2				:x1 (Default)
+STR_MC_3				:x2
+STR_MC_4				:x4
+
+STR_AC_M8				:/256
+STR_AC_M7				:/128
+STR_AC_M6				:/64
+STR_AC_M5				:/32
+STR_AC_M4				:/16
+STR_AC_M3				:/8
+STR_AC_M2				:/4
+STR_AC_M1				:/2
+STR_AC_0				:x1 (Default)
+STR_AC_1				:x2
+STR_AC_2				:x4
+STR_AC_3				:x8
+STR_AC_4				:x16
+STR_AC_5				:x32
+STR_AC_6				:x64
+STR_AC_7				:x128
+STR_AC_8				:x256
+STR_AC_9				:x512
+STR_AC_10				:x1024
+STR_AC_11				:x2048
+STR_AC_12				:x4096
+STR_AC_13				:x8192
+STR_AC_14				:x16384
+STR_AC_15				:x32768
+STR_AC_16				:x65536
+
+STR_PARAM_CC			:Company Colours for Depots
+STR_PARAM_CC_DESC		:When disabled, the depots will be coloured as they would be in real life.
+
+STR_PARAM_URBAN			:Urban tracks have urban ground
+STR_PARAM_URBAN_DESC	:When enabled, a stone ground will appear below the tracks, similar to JapanSet tracks.
+
+STR_FENCE				:Fences
+STR_FENCE_DESC			:Replaces or deactivates the fences for railtracks.
+STR_FENCE_1				:None
+STR_FENCE_2				:Only for urban maglevs
+STR_FENCE_3				:Only for high speed maglevs
+STR_FENCE_4				:All railtypes
+
+STR_HSC					:Highspeed Maglev construction cost
+STR_MSC					:Urban Maglev construction cost
+STR_HSM					:Highspeed Maglev maintenance cost
+STR_MSM					:Urban Maglev maintenance cost
+
+STR_ASC					:Additional construction cost scaling
+STR_ASM					:Additional maintenance cost scaling
+STR_ASC_DESC			:Construction cost for all maglev tracks will be multiplied by this amount. This is on top of the Highspeed and Urban cost settings.
+STR_ASM_DESC			:Maintenance cost for all maglev tracks will be multiplied by this amount. This is on top of the Highspeed and Urban cost settings. You must activate 'Advanced Settings -> Economy -> Infrastructure maintenance' for this setting to take effect
+
+STR_CON_DESC			:
+STR_MAINT_DESC			:You must activate 'Advanced Settings -> Economy -> Infrastructure maintenance' for this setting to take effect
+
+STR_PARAM_LBAS			:M-Bahn Tracks
+STR_PARAM_TCAS			:Transrapid Tracks
+STR_PARAM_TBAI			:Urban Maglev Tracks
+STR_PARAM_LCAI			:SC-Maglev Tracks
+STR_PARAM_TCAI			:SUMA Tracks
+STR_PARAM_TRACK_DESC	:Use this to disable specific tracks. May make certain trains unavailable.
+
+STR_PARAM_LBAS_DEP		:M-Bahn Depot
+STR_PARAM_TCAS_DEP		:Transrapid Depot
+STR_PARAM_TBAI_DEP		:Urban Maglev Depot
+STR_PARAM_LCAI_DEP		:SC-Maglev Depot
+STR_PARAM_TCAI_DEP		:SUMA Depot
+
+STR_PARAM_LBAS_DEPOT	:Depot used for M-Bahn
+STR_PARAM_TCAS_DEPOT	:Depot used for Transrapid
+STR_PARAM_TBAI_DEPOT	:Depot used for Urban Maglev
+STR_PARAM_LCAI_DEPOT	:Depot used for SC-Maglev
+STR_PARAM_TCAI_DEPOT	:Depot used for SUMA
+STR_PARAM_DEPOT_DESC	:Set which depot you would prefer for this railtype.
+
+STR_PARAM_BRICK_TUNNEL		:Make high speed maglev tunnel full tile
+STR_PARAM_BRICK_TUNNEL_DESC	:When enabled, the high speed maglev tunnel will get a brick background. Use this when a grf deletes the tunnel ground sprites. Automatically activated when the Monorail Track Replacement is loaded.
+
+STR_PARAM_MGLV			:Override stock maglev track with
+STR_PARAM_MGLV_DESC		:This setting should be set to a non-disabled tracktype. This is to disable the stock maglev track to improve compatibility.
+
+# Misc Strings

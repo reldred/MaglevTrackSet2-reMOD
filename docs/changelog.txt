@@ -1,0 +1,51 @@
+2.6 - 19/05/2022
+------------------------------------------------------------------------
+- Fixed: Urban tracks not with urban ground when set as primary maglev tracktype.
+
+2.5 - 11/02/2021
+------------------------------------------------------------------------
+- Feature: Additional cost parameter to set the costs much, much larger.
+
+2.4 - 23/11/2020
+------------------------------------------------------------------------
+- Fixed: Alignment issues
+
+2.3 - 20/11/2020
+------------------------------------------------------------------------
+- Feature: Urban ground for urban tracks
+
+2.2 - 27/07/2019
+------------------------------------------------------------------------
+- Added: Hidden tracktype with code "TBAS", trains with this tracktype can run
+on both Urban maglev tracks and Transrapid tracks.
+- Feature: Ground tile sprite on high speed tunnel tiles can be covered up
+to not cause a graphical glitch when deleted, for instance when Monorail Track
+Replacement is loaded. Default on when Monorail Track Replacement is loaded.
+- Fixed: SUMA maglev trains not being compatible with Urban maglev tracks when
+Urban maglev tracks are set as MGLV replacement track.
+
+2.1 - 27/07/2018
+------------------------------------------------------------------------
+- Fixed: Name of SC-Maglev not showing properly.
+- Fixed: Urban Maglevs loading the SUMA tracks and taking up 2 slots.
+
+2.0 - 21/07/2018
+------------------------------------------------------------------------
+Initial release
+
+------ Differences with v1:
+- Redone: All sprites for the tracks and the depots have been completely
+redone.
+- Added: SUMA tracks for the South Korean High Speed Maglev trains, should
+anyone ever make a trainset with this train.
+- Removed: Three Phase Medium Speed Maglev. Chinese Urban maglevs now use
+the universal "Urban Maglev Track".
+- Changed: Trains now have names describing what trains run on it. This
+corresponds to the description in RIMS.
+- Changed: All high speed maglev tracks now have the maximum speed of 1230kmh.
+- Changed: All medium speed maglev tracks now have the maximum speed of 210kmh,
+to take into consideration China's idea to make a 210kmh medium speed maglev train.
+- Added: Custom fences.
+- Added: Custom tunnel portals.
+- Feature: Ability to turn fences off.
+- Feature: Ability to switch which depot you want for what tracktype.

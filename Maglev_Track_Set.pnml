@@ -1,0 +1,55 @@
+//Maglev Track Set v2
+//Defines the GRF
+#include "src/header.pnml"
+
+//set base cost multiplier for this set
+basecost {
+	PR_BUILD_RAIL:		    -8 + PARAM_AS_CONST;
+	PR_MAINTENANCE_RAIL:    -8 + PARAM_AS_MAINT;
+}
+//Defines how the sprites are tracked, courtesy of the swedish rail set.
+#include "src/template.pnml"
+
+#include "src/tt-table.pnml"
+
+//Overwrites stock maglev rail.
+#include "src/Tracktypes/MGLV.pnml"
+//Tracktypes
+if (PARAM_MGLV == 1 && PARAM_TCAS == 1) {
+	#include "src/Tracktypes/MGLV/TCAS.pnml"
+} else if (PARAM_TCAS == 1) {
+	#include "src/Tracktypes/TCAS.pnml"
+}
+if (PARAM_MGLV == 2 && PARAM_LCAI == 1) {
+	#include "src/Tracktypes/MGLV/LCAI.pnml"
+} else if (PARAM_LCAI == 1) {
+	#include "src/Tracktypes/LCAI.pnml"
+}
+if (PARAM_MGLV == 3 && PARAM_TCAI == 1) {
+	#include "src/Tracktypes/MGLV/TCAI.pnml"
+} else if (PARAM_TCAI == 1) {
+	if (PARAM_MGLV == 4) {
+		#include "src/Tracktypes/TCAI_M.pnml"	
+	} else {
+		#include "src/Tracktypes/TCAI.pnml"	
+	}
+}
+if (PARAM_MGLV == 4 && PARAM_TBAI == 1) {
+	#include "src/Tracktypes/MGLV/TBAI.pnml"
+} else if (PARAM_TBAI == 1) {
+	#include "src/Tracktypes/TBAI.pnml"
+}
+if (PARAM_MGLV == 5 && PARAM_LBAS == 1) {
+	#include "src/Tracktypes/MGLV/LBAS.pnml"
+} else if (PARAM_LBAS == 1) {
+	#include "src/Tracktypes/LBAS.pnml"
+}
+if (PARAM_TBAI == 1 || PARAM_TCAS == 1) {
+	if (PARAM_MGLV == 1 || PARAM_MGLV == 4) {
+		#include "src/Tracktypes/TBAS_M.pnml"
+	} else {
+		#include "src/Tracktypes/TBAS.pnml"	
+	}
+}
+
+//cd /mnt/c/Temp/MTS2
