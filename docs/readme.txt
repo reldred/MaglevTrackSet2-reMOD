@@ -1,6 +1,6 @@
-Maglev Track Set 2.2
+Maglev Track Set 2.6
 ===================================
-Maglev Track Set 2.2
+Maglev Track Set 2.6
 
 ----------
 0 Contents
@@ -32,9 +32,8 @@ maglev trains on different types of tracks for extra realism.
 It is also possible to use this set solely to replace the default maglev
 tracks. Please refer to 2.4 for instructions on how to do this.
 
-Maglev Track Set 2.2
-MD5Hash:  {{GRF_MD5}}
-Version:  3
+Maglev Track Set 2.6
+Version:  8
 GRF ID:   "EN\02\02"
 
 
@@ -243,4 +242,4 @@ contact Erato via Private Message at www.tt-forums.net.
 8 License
 ---------
 
-CC BY-NC 4.0
+GPL v2
