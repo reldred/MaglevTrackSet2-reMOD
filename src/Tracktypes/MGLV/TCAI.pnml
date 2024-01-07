@@ -22,8 +22,8 @@ item(FEAT_RAILTYPES, MGLV, 4) {
 		 maintenance_cost:		     COSTPARAM(12,PARAM_HS_MAINT);     		   // Maglev rail needs barely any maintenance
      }
      graphics {
-         track_overlay:		TCAI_overlay;				// defines the sprites drawn as overlay for junctions and highlight
-         underlay:			TCAI_underlay;				// defines the usual tracks and the underlay for junctions
+         track_overlay:		switch_TCAI_overlay;				// defines the sprites drawn as overlay for junctions and highlight
+         underlay:			switch_TCAI_underlay;				// defines the usual tracks and the underlay for junctions
          bridge_surfaces:	TCAI_bridge;				// defines the overlay drawn over bridges
 		 tunnels:			TCAI_tunnel;				// defines the tracks drawn on a funnel tile
          depots:            switch_depot_TCAI;    				// defines the depot sprites

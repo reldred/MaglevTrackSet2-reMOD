@@ -770,6 +770,12 @@ spriteset (TCAS_underlay, "grf/TCAS.png") {
 spriteset (TCAS_overlay, "grf/TCAS.png") {
  tmpl_overlay_track_types()
 }
+spriteset (TCUS_underlay, "grf/TCUS.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TCUS_overlay, "grf/TCUS.png") {
+ tmpl_overlay_track_types()
+}
 spriteset (TCAS_bridge, "grf/TCAS.png") {
  tmpl_bridges_overlay()
 }
@@ -792,6 +798,14 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_TCAS, PARAM_DEPOT_TCAS){
  4: switch_TBAI_depot;
  5: switch_LBAS_depot;
  6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAS_underlay, PARAM_URBAN_OTHER){
+ 0: TCAS_underlay;
+ 1: TCUS_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAS_overlay, PARAM_URBAN_OTHER){
+ 0: TCAS_overlay;
+ 1: TCUS_overlay;
 }
  //LCAI
 spriteset (LCAI_underlay, "grf/LCAI.png") {
@@ -844,6 +858,12 @@ spriteset (TCAI_underlay, "grf/TCAI.png") {
 spriteset (TCAI_overlay, "grf/TCAI.png") {
  tmpl_overlay_track_types()
 }
+spriteset (TCUI_underlay, "grf/TCUI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TCUI_overlay, "grf/TCUI.png") {
+ tmpl_overlay_track_types()
+}
 spriteset (TCAI_bridge, "grf/TCAI.png") {
  tmpl_bridges_overlay()
 }
@@ -866,6 +886,14 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_TCAI, PARAM_DEPOT_TCAI){
  4: switch_TBAI_depot;
  5: switch_LBAS_depot;
  6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAI_underlay, PARAM_URBAN){
+ 0: TCAI_underlay;
+ 1: TCUI_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAI_overlay, PARAM_URBAN){
+ 0: TCAI_overlay;
+ 1: TCUI_overlay;
 }
  //TBAI
 spriteset (TBAI_underlay, "grf/TBAI.png") {
@@ -981,8 +1009,8 @@ item(FEAT_RAILTYPES, MGLV, 4) {
    maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
      }
      graphics {
-         track_overlay: TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
-         underlay: TCAS_underlay; // defines the usual tracks and the underlay for junctions
+         track_overlay: switch_TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TCAS_underlay; // defines the usual tracks and the underlay for junctions
          bridge_surfaces: TCAS_bridge; // defines the overlay drawn over bridges
    tunnels: TCAS_tunnel; // defines the tracks drawn on a funnel tile
          depots: switch_depot_TCAS; // defines the depot sprites
@@ -1016,8 +1044,8 @@ item(FEAT_RAILTYPES, TCAT, 15) {
    maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
      }
      graphics {
-         track_overlay: TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
-         underlay: TCAS_underlay; // defines the usual tracks and the underlay for junctions
+         track_overlay: switch_TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TCAS_underlay; // defines the usual tracks and the underlay for junctions
          bridge_surfaces: TCAS_bridge; // defines the overlay drawn over bridges
    tunnels: TCAS_tunnel; // defines the tracks drawn on a funnel tile
          depots: switch_depot_TCAS; // defines the depot sprites
@@ -1122,8 +1150,8 @@ item(FEAT_RAILTYPES, MGLV, 4) {
    maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
      }
      graphics {
-         track_overlay: TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
-         underlay: TCAI_underlay; // defines the usual tracks and the underlay for junctions
+         track_overlay: switch_TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TCAI_underlay; // defines the usual tracks and the underlay for junctions
          bridge_surfaces: TCAI_bridge; // defines the overlay drawn over bridges
    tunnels: TCAI_tunnel; // defines the tracks drawn on a funnel tile
          depots: switch_depot_TCAI; // defines the depot sprites
@@ -1193,8 +1221,8 @@ item(FEAT_RAILTYPES, TCAI, 13) {
    maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
      }
      graphics {
-         track_overlay: TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
-         underlay: TCAI_underlay; // defines the usual tracks and the underlay for junctions
+         track_overlay: switch_TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TCAI_underlay; // defines the usual tracks and the underlay for junctions
          bridge_surfaces: TCAI_bridge; // defines the overlay drawn over bridges
    tunnels: TCAI_tunnel; // defines the tracks drawn on a funnel tile
          depots: switch_depot_TCAI; // defines the depot sprites
