@@ -3,7 +3,7 @@
 
 # General GRF strings
 STR_GRF_NAME	:Maglev Track Set 2.6 reMOD
-STR_GRF_DESC	:This set is the second installment of the Maglev Track Set, a track set that allows the user to separate their various maglev trains on different types of tracks for extra realism. {}{BLACK} {}{COPYRIGHT}2018-2022 Erato Nysiad{}Additional modifications 2023-2024 by {}Urban ground from the JapanSet crew.{}License:GPL v2
+STR_GRF_DESC	:This set is the second installment of the Maglev Track Set, a track set that allows the user to separate their various maglev trains on different types of tracks for extra realism. {}{BLACK} {}{COPYRIGHT}2018-2022 Erato Nysiad{}Additional modifications 2023-2024 by reldred{}Urban ground from the JapanSet crew.{}License:GPL v2
 
 # Track strings
 STR_LBAS				:M-Bahn
