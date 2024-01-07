@@ -20,7 +20,7 @@ grf {
    name: string(STR_HSC);
    desc: string(STR_CON_DESC);
    min_value: 0;
-   max_value: 8;
+   max_value: 4;
    def_value: 2;
    names: {
     0: string(STR_MC_0);
@@ -28,10 +28,6 @@ grf {
     2: string(STR_MC_2);
     3: string(STR_MC_3);
     4: string(STR_MC_4);
-    5: string(STR_MC_5);
-    6: string(STR_MC_6);
-    7: string(STR_MC_7);
-    8: string(STR_MC_8);
    };
   }
  }
@@ -41,7 +37,7 @@ grf {
    name: string(STR_MSC);
    desc: string(STR_CON_DESC);
    min_value: 0;
-   max_value: 8;
+   max_value: 4;
    def_value: 2;
    names: {
     0: string(STR_MC_0);
@@ -49,10 +45,6 @@ grf {
     2: string(STR_MC_2);
     3: string(STR_MC_3);
     4: string(STR_MC_4);
-    5: string(STR_MC_5);
-    6: string(STR_MC_6);
-    7: string(STR_MC_7);
-    8: string(STR_MC_8);
    };
   }
  }
@@ -62,7 +54,7 @@ grf {
    name: string(STR_HSM);
    desc: string(STR_MAINT_DESC);
    min_value: 0;
-   max_value: 8;
+   max_value: 4;
    def_value: 2;
    names: {
     0: string(STR_MC_0);
@@ -70,10 +62,6 @@ grf {
     2: string(STR_MC_2);
     3: string(STR_MC_3);
     4: string(STR_MC_4);
-    5: string(STR_MC_5);
-    6: string(STR_MC_6);
-    7: string(STR_MC_7);
-    8: string(STR_MC_8);
    };
   }
  }
@@ -83,7 +71,7 @@ grf {
    name: string(STR_MSM);
    desc: string(STR_MAINT_DESC);
    min_value: 0;
-   max_value: 8;
+   max_value: 4;
    def_value: 2;
    names: {
     0: string(STR_MC_0);
@@ -91,10 +79,6 @@ grf {
     2: string(STR_MC_2);
     3: string(STR_MC_3);
     4: string(STR_MC_4);
-    5: string(STR_MC_5);
-    6: string(STR_MC_6);
-    7: string(STR_MC_7);
-    8: string(STR_MC_8);
    };
   }
  }

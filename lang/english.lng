@@ -49,10 +49,6 @@ STR_MC_1				:/2
 STR_MC_2				:x1 (Default)
 STR_MC_3				:x2
 STR_MC_4				:x4
-STR_MC_5				:x8
-STR_MC_6				:x16
-STR_MC_7				:x32
-STR_MC_8				:x64
 
 STR_AC_M8				:/256
 STR_AC_M7				:/128
