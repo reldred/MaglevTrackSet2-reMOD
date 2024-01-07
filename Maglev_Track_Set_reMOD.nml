@@ -1,7 +1,7 @@
 //Maglev Track Set v2
 //Defines the GRF
 grf {
- grfid: "RE\01\0B";
+ grfid: "RJE\1B";
  name: string(STR_GRF_NAME);
  desc: string(STR_GRF_DESC);
  version: 8;
