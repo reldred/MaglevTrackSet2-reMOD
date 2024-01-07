@@ -21,11 +21,11 @@ switch(FEAT_RAILTYPES, SELF, HSM_tunnel_overlay, PARAM_BRICK_TUNNEL) {
 spriteset (UM_tunnel_overlay, "grf/LSM_Tunnel.png") {
 	tmpl_tunnel_overlays(0)
 }
-spriteset (HSM_fences, "grf/Fences.png") {
-	tmpl_fences(50)
+spriteset (HSM_fences, "grf/NewFences.png") {
+	tmpl_new_fences(0,0)
 }
-spriteset (UM_fences, "grf/Fences.png") {
-	tmpl_fences(0)
+spriteset (UM_fences, "grf/NewFences.png") {
+	tmpl_new_fences(0,0)
 }
 spriteset (NO_fences, "grf/Fences.png") {
 	tmpl_no_fences()
