@@ -17,14 +17,14 @@ item(FEAT_RAILTYPES, LCAI_ID, 14) {
 		 map_colour:				 165;
          curve_speed_multiplier:     3;
          station_graphics:           RAILTYPE_STATION_MAGLEV;                  
-         construction_cost:          COSTPARAM(28,PARAM_HS_CONST);             
+         construction_cost:          COSTPARAM(2048,PARAM_HS_CONST);             
          speed_limit:                1230 km/h;
          acceleration_model:         ACC_MODEL_MAGLEV;                        
 		 maintenance_cost:		     COSTPARAM(12,PARAM_HS_MAINT);     		   
      }
      graphics {
-         track_overlay:		LCAI_overlay;		
-         underlay:			LCAI_underlay;		
+         track_overlay:		switch_LCAI_overlay;				// defines the sprites drawn as overlay for junctions and highlight
+         underlay:			switch_LCAI_underlay;				// defines the usual tracks and the underlay for junctions	
          bridge_surfaces:	LCAI_bridge;			
 		 tunnels:			LCAI_tunnel;				// Custom Tunnel portals since v2
          depots:            switch_depot_LCAI;    		// Custom Depots

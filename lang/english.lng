@@ -2,7 +2,7 @@
 # 0x01 -> English
 
 # General GRF strings
-STR_GRF_NAME	:Maglev Track Set 2.6
+STR_GRF_NAME	:Maglev Track Set 2.6 reMOD
 STR_GRF_DESC	:This set is the second installment of the Maglev Track Set, a track set that allows the user to separate their various maglev trains on different types of tracks for extra realism. {}{BLACK} {}{COPYRIGHT}2018-2022 Erato Nysiad{}Urban ground from the JapanSet crew.{}License:GPL v2
 
 # Track strings
@@ -49,6 +49,10 @@ STR_MC_1				:/2
 STR_MC_2				:x1 (Default)
 STR_MC_3				:x2
 STR_MC_4				:x4
+STR_MC_5				:x8
+STR_MC_6				:x16
+STR_MC_7				:x32
+STR_MC_8				:x64
 
 STR_AC_M8				:/256
 STR_AC_M7				:/128
@@ -82,6 +86,9 @@ STR_PARAM_CC_DESC		:When disabled, the depots will be coloured as they would be 
 STR_PARAM_URBAN			:Urban tracks have urban ground
 STR_PARAM_URBAN_DESC	:When enabled, a stone ground will appear below the tracks, similar to JapanSet tracks.
 
+STR_PARAM_URBAN_OTHER	:Other tracks have urban ground
+STR_PARAM_URBAN_O_DESC	:When enabled, a stone ground will appear below the tracks, similar to JapanSet tracks.
+
 STR_FENCE				:Fences
 STR_FENCE_DESC			:Replaces or deactivates the fences for railtracks.
 STR_FENCE_1				:None
@@ -114,6 +121,7 @@ STR_PARAM_TCAS_DEP		:Transrapid Depot
 STR_PARAM_TBAI_DEP		:Urban Maglev Depot
 STR_PARAM_LCAI_DEP		:SC-Maglev Depot
 STR_PARAM_TCAI_DEP		:SUMA Depot
+STR_PARAM_NO_DEP		:No/Default Depot
 
 STR_PARAM_LBAS_DEPOT	:Depot used for M-Bahn
 STR_PARAM_TCAS_DEPOT	:Depot used for Transrapid

@@ -92,6 +92,7 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_TCAS, PARAM_DEPOT_TCAS){
 	3: switch_TCAI_depot;
 	4: switch_TBAI_depot;
 	5: switch_LBAS_depot;
+	6: CB_FAILED;
 }
 
  //LCAI
@@ -99,6 +100,12 @@ spriteset (LCAI_underlay, "grf/LCAI.png") {
 	tmpl_underlay_track_types()
 }
 spriteset (LCAI_overlay, "grf/LCAI.png") {
+	tmpl_overlay_track_types_EDS()
+}
+spriteset (LCUI_underlay, "grf/LCUI.png") {
+	tmpl_underlay_track_types()
+}
+spriteset (LCUI_overlay, "grf/LCUI.png") {
 	tmpl_overlay_track_types_EDS()
 }
 spriteset (LCAI_bridge, "grf/LCAI.png") {
@@ -123,6 +130,15 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_LCAI, PARAM_DEPOT_LCAI){
 	3: switch_TCAI_depot;
 	4: switch_TBAI_depot;
 	5: switch_LBAS_depot;
+	6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_underlay,  PARAM_URBAN_OTHER){
+	0: LCAI_underlay;
+	1: LCUI_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_overlay,  PARAM_URBAN_OTHER){
+	0: LCAI_overlay;
+	1: LCUI_overlay;
 }
 
 
@@ -155,6 +171,7 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_TCAI, PARAM_DEPOT_TCAI){
 	3: switch_TCAI_depot;
 	4: switch_TBAI_depot;
 	5: switch_LBAS_depot;
+	6: CB_FAILED;
 }
 
  //TBAI
@@ -192,6 +209,7 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_TBAI,  PARAM_DEPOT_TBAI){
 	3: switch_TCAI_depot;
 	4: switch_TBAI_depot;
 	5: switch_LBAS_depot;
+	6: CB_FAILED;
 }
 switch(FEAT_RAILTYPES, SELF, switch_TBAI_underlay,  PARAM_URBAN){
 	0: TBAI_underlay;
@@ -237,6 +255,7 @@ switch(FEAT_RAILTYPES, SELF, switch_depot_LBAS, PARAM_DEPOT_LBAS){
 	3: switch_TCAI_depot;
 	4: switch_TBAI_depot;
 	5: switch_LBAS_depot;
+	6: CB_FAILED;
 }
 switch(FEAT_RAILTYPES, SELF, switch_LBAS_underlay,  PARAM_URBAN){
 	0: LBAS_underlay;

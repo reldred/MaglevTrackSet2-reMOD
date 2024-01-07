@@ -16,7 +16,7 @@ item(FEAT_RAILTYPES, LBAS_ID, 11) {
 		 map_colour:				 174;
          curve_speed_multiplier:     3;
          station_graphics:           RAILTYPE_STATION_MAGLEV;                  // It's a maglev innit
-         construction_cost:          COSTPARAM(12,PARAM_MS_CONST);             // IDK I'll see
+         construction_cost:          COSTPARAM(1024,PARAM_MS_CONST);             // IDK I'll see
          speed_limit:                210 km/h;
          acceleration_model:         ACC_MODEL_MAGLEV;                         // It's a maglev innit
 		 maintenance_cost:		     COSTPARAM(7,PARAM_MS_MAINT);			   // Maglev rail needs barely any maintenance

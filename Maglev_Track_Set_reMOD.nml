@@ -1,0 +1,1441 @@
+//Maglev Track Set v2
+//Defines the GRF
+grf {
+ grfid: "RE\01\0B";
+ name: string(STR_GRF_NAME);
+ desc: string(STR_GRF_DESC);
+ version: 8;
+ min_compatible_version: 1;
+ param {
+  PARAM_CC {
+   type: bool;
+   name: string(STR_PARAM_CC);
+   desc: string(STR_PARAM_CC_DESC);
+   def_value: 0;
+  }
+ }
+ param {
+  PARAM_HS_CONST {
+   type: int;
+   name: string(STR_HSC);
+   desc: string(STR_CON_DESC);
+   min_value: 0;
+   max_value: 8;
+   def_value: 2;
+   names: {
+    0: string(STR_MC_0);
+    1: string(STR_MC_1);
+    2: string(STR_MC_2);
+    3: string(STR_MC_3);
+    4: string(STR_MC_4);
+    5: string(STR_MC_5);
+    6: string(STR_MC_6);
+    7: string(STR_MC_7);
+    8: string(STR_MC_8);
+   };
+  }
+ }
+ param {
+  PARAM_MS_CONST {
+   type: int;
+   name: string(STR_MSC);
+   desc: string(STR_CON_DESC);
+   min_value: 0;
+   max_value: 8;
+   def_value: 2;
+   names: {
+    0: string(STR_MC_0);
+    1: string(STR_MC_1);
+    2: string(STR_MC_2);
+    3: string(STR_MC_3);
+    4: string(STR_MC_4);
+    5: string(STR_MC_5);
+    6: string(STR_MC_6);
+    7: string(STR_MC_7);
+    8: string(STR_MC_8);
+   };
+  }
+ }
+ param {
+  PARAM_HS_MAINT {
+   type: int;
+   name: string(STR_HSM);
+   desc: string(STR_MAINT_DESC);
+   min_value: 0;
+   max_value: 8;
+   def_value: 2;
+   names: {
+    0: string(STR_MC_0);
+    1: string(STR_MC_1);
+    2: string(STR_MC_2);
+    3: string(STR_MC_3);
+    4: string(STR_MC_4);
+    5: string(STR_MC_5);
+    6: string(STR_MC_6);
+    7: string(STR_MC_7);
+    8: string(STR_MC_8);
+   };
+  }
+ }
+ param {
+  PARAM_MS_MAINT {
+   type: int;
+   name: string(STR_MSM);
+   desc: string(STR_MAINT_DESC);
+   min_value: 0;
+   max_value: 8;
+   def_value: 2;
+   names: {
+    0: string(STR_MC_0);
+    1: string(STR_MC_1);
+    2: string(STR_MC_2);
+    3: string(STR_MC_3);
+    4: string(STR_MC_4);
+    5: string(STR_MC_5);
+    6: string(STR_MC_6);
+    7: string(STR_MC_7);
+    8: string(STR_MC_8);
+   };
+  }
+ }
+ param {
+  PARAM_NO_FENCE {
+   type: int;
+   name: string(STR_FENCE);
+   desc: string(STR_FENCE_DESC);
+   min_value: 0;
+   max_value: 3;
+   def_value: 0;
+   names: {
+    0: string(STR_FENCE_1);
+    1: string(STR_FENCE_2);
+    2: string(STR_FENCE_3);
+    3: string(STR_FENCE_4);
+   };
+  }
+ }
+ param {
+  PARAM_MGLV {
+   type: int;
+   name: string(STR_PARAM_MGLV);
+   desc: string(STR_PARAM_MGLV_DESC);
+   min_value: 1;
+   max_value: 5;
+   def_value: 1;
+   names: {
+    1: string(STR_PARAM_TCAS);
+    2: string(STR_PARAM_LCAI);
+    3: string(STR_PARAM_TCAI);
+    4: string(STR_PARAM_TBAI);
+    5: string(STR_PARAM_LBAS);
+   };
+  }
+ }
+ param {
+  PARAM_TCAS {
+   type: bool;
+   name: string(STR_PARAM_TCAS);
+   desc: string(STR_PARAM_TRACK_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_LCAI {
+   type: bool;
+   name: string(STR_PARAM_LCAI);
+   desc: string(STR_PARAM_TRACK_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_TCAI {
+   type: bool;
+   name: string(STR_PARAM_TCAI);
+   desc: string(STR_PARAM_TRACK_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_TBAI {
+   type: bool;
+   name: string(STR_PARAM_TBAI);
+   desc: string(STR_PARAM_TRACK_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_LBAS {
+   type: bool;
+   name: string(STR_PARAM_LBAS);
+   desc: string(STR_PARAM_TRACK_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_DEPOT_TCAS {
+   type: int;
+   name: string(STR_PARAM_TCAS_DEPOT);
+   desc: string(STR_PARAM_DEPOT_DESC);
+   min_value: 1;
+   max_value: 6;
+   def_value: 1;
+   names: {
+    1: string(STR_PARAM_TCAS_DEP);
+    2: string(STR_PARAM_LCAI_DEP);
+    3: string(STR_PARAM_TCAI_DEP);
+    4: string(STR_PARAM_TBAI_DEP);
+    5: string(STR_PARAM_LBAS_DEP);
+    6: string(STR_PARAM_NO_DEP);
+   };
+  }
+ }
+ param {
+  PARAM_DEPOT_LCAI {
+   type: int;
+   name: string(STR_PARAM_LCAI_DEPOT);
+   desc: string(STR_PARAM_DEPOT_DESC);
+   min_value: 1;
+   max_value: 6;
+   def_value: 2;
+   names: {
+    1: string(STR_PARAM_TCAS_DEP);
+    2: string(STR_PARAM_LCAI_DEP);
+    3: string(STR_PARAM_TCAI_DEP);
+    4: string(STR_PARAM_TBAI_DEP);
+    5: string(STR_PARAM_LBAS_DEP);
+    6: string(STR_PARAM_NO_DEP);
+   };
+  }
+ }
+ param {
+  PARAM_DEPOT_TCAI {
+   type: int;
+   name: string(STR_PARAM_TCAI_DEPOT);
+   desc: string(STR_PARAM_DEPOT_DESC);
+   min_value: 1;
+   max_value: 6;
+   def_value: 3;
+   names: {
+    1: string(STR_PARAM_TCAS_DEP);
+    2: string(STR_PARAM_LCAI_DEP);
+    3: string(STR_PARAM_TCAI_DEP);
+    4: string(STR_PARAM_TBAI_DEP);
+    5: string(STR_PARAM_LBAS_DEP);
+    6: string(STR_PARAM_NO_DEP);
+   };
+  }
+ }
+ param {
+  PARAM_DEPOT_TBAI {
+   type: int;
+   name: string(STR_PARAM_TBAI_DEPOT);
+   desc: string(STR_PARAM_DEPOT_DESC);
+   min_value: 1;
+   max_value: 6;
+   def_value: 4;
+   names: {
+    1: string(STR_PARAM_TCAS_DEP);
+    2: string(STR_PARAM_LCAI_DEP);
+    3: string(STR_PARAM_TCAI_DEP);
+    4: string(STR_PARAM_TBAI_DEP);
+    5: string(STR_PARAM_LBAS_DEP);
+    6: string(STR_PARAM_NO_DEP);
+   };
+  }
+ }
+ param {
+  PARAM_DEPOT_LBAS {
+   type: int;
+   name: string(STR_PARAM_LBAS_DEPOT);
+   desc: string(STR_PARAM_DEPOT_DESC);
+   min_value: 1;
+   max_value: 6;
+   def_value: 5;
+   names: {
+    1: string(STR_PARAM_TCAS_DEP);
+    2: string(STR_PARAM_LCAI_DEP);
+    3: string(STR_PARAM_TCAI_DEP);
+    4: string(STR_PARAM_TBAI_DEP);
+    5: string(STR_PARAM_LBAS_DEP);
+    6: string(STR_PARAM_NO_DEP);
+   };
+  }
+ }
+ param {
+  PARAM_BRICK_TUNNEL {
+   type: bool;
+   name: string(STR_PARAM_BRICK_TUNNEL);
+   desc: string(STR_PARAM_BRICK_TUNNEL_DESC);
+   def_value: 0;
+  }
+ }
+ param {
+  PARAM_URBAN {
+   type: bool;
+   name: string(STR_PARAM_URBAN);
+   desc: string(STR_PARAM_URBAN_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_URBAN_OTHER {
+   type: bool;
+   name: string(STR_PARAM_URBAN_OTHER);
+   desc: string(STR_PARAM_URBAN_O_DESC);
+   def_value: 1;
+  }
+ }
+ param {
+  PARAM_AS_CONST {
+   type: int;
+   name: string(STR_ASC);
+   desc: string(STR_ASC_DESC);
+   min_value: 0;
+   max_value: 24;
+   def_value: 8;
+   names: {
+    0: string(STR_AC_M8);
+    1: string(STR_AC_M7);
+    2: string(STR_AC_M6);
+    3: string(STR_AC_M5);
+    4: string(STR_AC_M4);
+    5: string(STR_AC_M3);
+    6: string(STR_AC_M2);
+    7: string(STR_AC_M1);
+    8: string(STR_AC_0);
+    9: string(STR_AC_1);
+    10: string(STR_AC_2);
+    11: string(STR_AC_3);
+    12: string(STR_AC_4);
+    13: string(STR_AC_5);
+    14: string(STR_AC_6);
+    15: string(STR_AC_7);
+    16: string(STR_AC_8);
+    17: string(STR_AC_9);
+    18: string(STR_AC_10);
+    19: string(STR_AC_11);
+    20: string(STR_AC_12);
+    21: string(STR_AC_13);
+    22: string(STR_AC_14);
+    23: string(STR_AC_15);
+    24: string(STR_AC_16);
+   };
+  }
+ }
+ param {
+  PARAM_AS_MAINT {
+   type: int;
+   name: string(STR_ASM);
+   min_value: 0;
+   max_value: 24;
+   def_value: 8;
+   names: {
+    0: string(STR_AC_M8);
+    1: string(STR_AC_M7);
+    2: string(STR_AC_M6);
+    3: string(STR_AC_M5);
+    4: string(STR_AC_M4);
+    5: string(STR_AC_M3);
+    6: string(STR_AC_M2);
+    7: string(STR_AC_M1);
+    8: string(STR_AC_0);
+    9: string(STR_AC_1);
+    10: string(STR_AC_2);
+    11: string(STR_AC_3);
+    12: string(STR_AC_4);
+    13: string(STR_AC_5);
+    14: string(STR_AC_6);
+    15: string(STR_AC_7);
+    16: string(STR_AC_8);
+    17: string(STR_AC_9);
+    18: string(STR_AC_10);
+    19: string(STR_AC_11);
+    20: string(STR_AC_12);
+    21: string(STR_AC_13);
+    22: string(STR_AC_14);
+    23: string(STR_AC_15);
+    24: string(STR_AC_16);
+   };
+  }
+ }
+}
+//set base cost multiplier for this set
+basecost {
+ PR_BUILD_RAIL: -8 + PARAM_AS_CONST;
+ PR_MAINTENANCE_RAIL: -8 + PARAM_AS_MAINT;
+}
+//Defines how the sprites are tracked, courtesy of the swedish rail set.
+/* $Id$ */
+/*
+
+ * This file is part of the Swedish RailSet.
+
+ * Swedish RailSet is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+
+ * Swedish RailSet is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with Swedish RailSet. If not, see <http://www.gnu.org/licenses/>.
+
+ */
+// Default ground tile template (re-use as needed)
+template ground_tile(x, y) { [x, y, 64, 31, -31, 0, 9] }
+// track_type underlays
+template tmpl_underlay_straight() {
+ [ 75, 0, 64,31, -31, 0]
+ [ 0, 0, 64,31, -31, 0]
+}
+template tmpl_underlay_slope() {
+ [ 75, 40, 64,39, -31, -8]
+ [150, 40, 64,23, -31, 0]
+ [225, 40, 64,23, -31, 0]
+ [300, 40, 64,39, -31, -8]
+}
+template tmpl_underlay_slope_U() {
+ [ 75, 40, 64,39, -31, -8]
+ [150, 40, 64,23, -31, 0]
+ [225, 40, 64,23, -31, 0]
+ [300, 40, 64,39, -32, -8]
+}
+template tmpl_underlay_diagonal() {
+ [150, 0, 64,31, -31, 0]
+ [225, 0, 64,31, -31, 0]
+ [ 0, 40, 64,31, -31, 0]
+ [300, 0, 64,31, -31, 0]
+}
+template tmpl_underlay_track_types() {
+ tmpl_underlay_straight()
+ tmpl_underlay_diagonal()
+ tmpl_underlay_slope()
+ // x - crossing
+ [ 0,120, 64,31, -31, 0]
+ // underlay for crossings w/o tracks
+ [ 0, 80, 64,31, -31, 0]
+ [225, 80, 64,31, -31, 0]
+ [150, 80, 64,31, -31, 0]
+ [ 75, 80, 64,31, -31, 0]
+ [300, 80, 64,31, -31, 0]
+}
+template tmpl_underlay_track_types_U() {//Urban
+ tmpl_underlay_straight()
+ tmpl_underlay_diagonal()
+ tmpl_underlay_slope_U()
+ // x - crossing
+ [ 0,120, 64,31, -31, 0]
+ // underlay for crossings w/o tracks
+ [ 0, 80, 64,31, -31, 0]
+ [225, 80, 64,31, -31, 0]
+ [150, 80, 64,31, -31, 0]
+ [ 75, 80, 64,31, -31, 0]
+ [300, 80, 64,31, -31, 0]
+}
+template tmpl_overlay_straight_EDS() {
+ [ 0,155, 42,23, -19-2, 5-1]
+ [ 50,155, 42,23, -19, 5-1]
+}
+template tmpl_overlay_slopes_EDS() {
+ [ 0,195, 64,39, -31, -8]
+ [ 75,195, 64,23, -31, 0]
+ [150,195, 64,23, -31, 0]
+ [225,195, 64,39, -32, -9]
+}
+template tmpl_overlay_diagonal_EDS() {
+ [97,155, 46, 8, -19-3, 4-1]
+ [150,155, 48, 8, -19-4, 20-1]
+ [200,155, 12,21, 11, 6-1]
+ [250,155, 12,21, -21, 6-1]
+}
+// track_type overlays_EDS
+template tmpl_overlay_track_types_EDS() {
+    tmpl_overlay_straight_EDS()
+    tmpl_overlay_diagonal_EDS()
+    tmpl_overlay_slopes_EDS()
+}
+template tmpl_overlay_straight() {
+ [ 0,155, 40,23, -19, 5]
+ [ 50,155, 40,23, -19, 5]
+}
+template tmpl_overlay_slopes() {
+ [ 0,195, 64,39, -31, -8]
+ [ 75,195, 64,23, -31, 0]
+ [150,195, 64,23, -31, 0]
+ [225,195, 64,39, -32, -9]
+}
+template tmpl_overlay_diagonal() {
+ [100,155, 40, 7, -19, 4]
+ [150,155, 40, 7, -19, 20]
+ [200,155, 12,19, 11, 6]
+ [250,155, 12,19, -21, 6]
+}
+// track_type overlays
+template tmpl_overlay_track_types() {
+    tmpl_overlay_straight()
+    tmpl_overlay_diagonal()
+    tmpl_overlay_slopes()
+}
+template tmpl_bridges_underlay() {
+ tmpl_underlay_straight()
+ tmpl_underlay_slope()
+ tmpl_underlay_diagonal()
+}
+// bridge surface overlays
+template tmpl_bridges_overlay() {
+//    tmpl_overlay_straight()
+//    tmpl_overlay_slopes()
+//    tmpl_overlay_diagonal()
+ tmpl_bridges_underlay()
+}
+// track_type tunnel tracks
+template tmpl_tunnel_tracks() {
+ [ 75, 0, 64,31, -31, 0]
+ [ 0, 0, 64,31, -31, 0]
+ [ 75, 0, 64,31, -31, 0]
+ [ 0, 0, 64,31, -31, 0]
+}
+// track_type level crossings
+template tmpl_level_crossing_track_types_empty() {
+ [ 0,155, 40,21, -20, 5]
+ [ 50,155, 40,21, -20, 5]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+ [ 0,240, 10,10, 0, 0]
+}
+template tmpl_rails_crossing(x,y) {
+ [ x, y, 45,23, -21, 4]
+ [x+49, y, 45,23, -22, 4]
+}
+template tmpl_level_crossing_track_types_open(y) {
+    tmpl_rails_crossing(0, 0)
+ [ 0, 0, 1,1, 0, 0]
+ [ 0, y, 5,23, -5, -16]
+ [20, y, 5,23, -6, -21]
+ [ 0, 0, 1,1, 0, 0]
+ [40, y, 5,23, 3, -18]
+ [ 0, 0, 1,1, 0, 0]
+ [ 0, 0, 1,1, 0, 0]
+ [60, y, 5,23, 1, -22]
+}
+template tmpl_level_crossing_track_types_closed(y) {
+    tmpl_rails_crossing(0, 0)
+ [ 0, 0, 1,1, 0, 0]
+ [ 0, y, 19,19, -5, -7]
+ [20, y, 19,19, -20, -12]
+ [ 0, 0, 1,1, 0, 0]
+ [40, y, 19,19, 3, -7]
+ [ 0, 0, 1,1, 0, 0]
+ [ 0, 0, 1,1, 0, 0]
+ [60, y, 19,19, -13, -11]
+}
+// fences
+template tmpl_fences(y) {
+//fence drawing on diagonals is and has always been broken, the fences on both sides really need to be moved apart 4 px horizontally and 2 px vertically (1 "TTD unit", see also:
+//	- https://www.tt-forums.net/viewtopic.php?f=26&t=61584
+//	- https://bugs.openttd.org/task/5309
+// need to move both sides half of that to compensate, or (todo) write a patch
+// commented offsets are perfect for the front fence on diagonals
+//	[  0,  y, 33,22, -30,  -6]
+ [ 0, y, 33,22, -32, -7]
+//	[ 48,  y, 33,22,  -2,  -6]
+ [ 48, y, 33,22, 0, -7]
+ [ 93, y, 8,32, -3, -19] // verticals are OK as-is
+ [112, y, 65, 9, -32, -10] // same for horizontals
+//	[192,  y, 33,15, -29,  -7]
+ [192, y, 33,15, -31, -8]
+//	[240,  y, 33,15,  -1,  -7]
+ [240, y, 33,15, 1, -8]
+//	[288,  y, 33,30, -30, -14]
+ [288, y, 33,30, -32, -15]
+//	[350,  y, 33,30,  -2, -14]
+ [350, y, 33,30, 0, -15]
+}
+// gui
+template tmpl_gui() {
+ [ 0, 0, 20, 20, 0, 0]
+ [ 25, 0, 20, 20, 0, 0]
+ [ 50, 0, 20, 20, 0, 0]
+ [ 75, 0, 20, 20, 0, 0]
+ [100, 0, 20, 20, 0, 0]
+ [125, 0, 20, 20, 0, 0]
+ [150, 0, 20, 20, 0, 0]
+ [175, 0, 20, 20, 0, 0]
+ [200, 0, 32, 32, 0, 0]
+ [250, 0, 32, 32, 0, 0]
+ [300, 0, 32, 32, 0, 0]
+ [350, 0, 32, 32, 0, 0]
+ [400, 0, 32, 32, 0, 0]
+ [450, 0, 32, 32, 0, 0]
+ [500, 0, 32, 32, 0, 0]
+ [550, 0, 32, 32, 0, 0]
+}
+template tmpl_tunnel_overlaytracks(y) {
+ [ 0, y, 64, 39, -7-24, -8]
+ [65, y, 64, 39, -9-7-13-2, -3-14+1]
+ [130, y, 64, 39, -26-7+2, -3-14+1]
+ [195, y, 64, 39, -19-12, -8]
+}
+ template tmpl_tunnel_overlays(y) {
+ [ 0, y, 64, 39, -7-24, -38]
+ [65, y, 64, 39, -9-7-13-2, -33-14+1]
+ [130, y, 64, 39, -26-7+2, -33-14+1]
+ [195, y, 64, 39, -19-12, -38]
+}
+template tmpl_no_fences() {
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+ [ 0, 0, 1, 1, 0, 0]
+}
+template tmpl_depot(x) {
+ [65, 96+2*x, 64,47+x, -9-22, -31+11-x]
+ [65, 0, 64,47+x, -9, -31-x]
+ [ 0, 96+2*x, 64,47+x, -53+22, -31+11-x]
+ [ 0, 0, 64,47+x, -53, -31-x]
+ [ 0, 48+x, 64,47+x, -53, -31-x]
+ [65, 48+x, 64,47+x, -9, -31-x]
+}
+// Catenary stuff from Auztracks
+/**********************************************
+
+//Catenarypylons
+
+ **********************************************/
+//Catenarypylons
+template template_catenarydoublepylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 4, 28, 14, 32, -11, -30]
+ [ 20, 17, 40, 43, 1, -41]
+ [ 62, 28, 14, 32, -1, -30]
+ [ 78, 17, 40, 43, -39, -41]
+ [ 120, 28, 14, 32, -6, -31]
+ [ 136, 16, 14, 44, -6, -42]
+ [ 152, 28, 28, 32, 0, -31]
+ [ 181, 28, 27, 32, -26, -31]
+}
+/**********************************************
+
+//Catenarywires
+
+ **********************************************/
+template template_catenarywires() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 10, 100, 64, 42, -45, -20]
+ [ 100, 100, 64, 42, -17, -20]
+ [ 200, 100, 32, 11, 0, -12] //-1
+ [ 300, 100, 1, 21, 0, -8] //0
+ [ 10, 200, 64, 50, -45, -21]
+ [ 100, 200, 64, 34, -17, -10]
+ [ 200, 200, 64, 34, -45, -10]
+ [ 300, 200, 64, 50, -17, -21]
+ [ 10, 300, 64, 42, -45, -20]
+ [ 100, 300, 64, 42, -17, -20]
+ [ 200, 300, 32, 11, 0, -12]
+ [ 300, 300, 1, 21, 0, -8] //0
+ [ 10, 400, 64, 50, -45, -21]
+ [ 100, 400, 64, 34, -17, -10]
+ [ 200, 400, 64, 34, -45, -10]
+ [ 300, 400, 64, 50, -17, -21]
+ [ 10, 500, 64, 42, -45, -20]
+ [ 100, 500, 64, 42, -17, -20]
+ [ 200, 500, 32, 11, 0, -12]
+ [ 300, 500, 1, 21, 0, -8] //0
+ [ 10, 600, 64, 50, -45, -21]
+ [ 100, 600, 64, 34, -17, -10]
+ [ 200, 600, 64, 34, -45, -10]
+ [ 300, 600, 64, 50, -17, -21]
+ [ 10, 700, 64, 42, -45, -20]
+ [ 100, 700, 64, 42, -17, -20]
+ [ 200, 700, 64, 42, -45, -20]
+ [ 300, 700, 64, 42, -17, -20]
+}
+// Catenary stuff from Auztracks
+/**********************************************
+
+//Catenarypylons
+
+ **********************************************/
+template template_nopylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+}
+template template_metroroof() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ //Single tile
+ [0, 0, 64, 31+8, -32-16+3, -20+15]
+ [65, 48, 64, 31+8, -32+16-1, -20+15]
+ [130, 32+8, 64, 31, -32+16-1, -20+15]
+ [0, 32+8, 64, 31, -32-16+1, -20+15-1]
+ //Single tile sloped
+ [65, 0, 64, 39+8, -32-13, -20+14]
+ [130, 0, 64, 23+8, -32+15, -20+24]
+ [195, 0, 64, 23+8, -32-13, -20+24]
+ [260, 0, 64, 39+8, -32+15, -20+14]
+ //Multitile
+ [0, 0, 64, 31+8, -32-16+3, -20+15]
+ [65, 48, 64, 31+8, -32+16-1, -20+15]
+ [130, 32+8, 64, 31, -32+16-1, -20+15]
+ [0, 32+8, 64, 31, -32-16+1, -20+15-1]
+ //Multitile
+ [65, 0, 64, 39+8, -32-13, -20+14]
+ [130, 0, 64, 23+8, -32+15, -20+24]
+ [195, 0, 64, 23+8, -32-13, -20+24]
+ [260, 0, 64, 39+8, -32+15, -20+14]
+ //Multitile
+ [0, 0, 64, 31+8, -32-16+3, -20+15]
+ [65, 48, 64, 31+8, -32+16-1, -20+15]
+ [130, 32+8, 64, 31, -32+16-1, -20+15]
+ [0, 32+8, 64, 31, -32-16+1, -20+15-1]
+ //Multitile
+ [65, 0, 64, 39+8, -32-13, -20+14]
+ [130, 0, 64, 23+8, -32+15, -20+24]
+ [195, 0, 64, 23+8, -32-13, -20+24]
+ [260, 0, 64, 39+8, -32+15, -20+14]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+ [1, 1, 1, 1, 1, 1]
+}
+// U-type MBAHN Three phase - LAAT
+// U-type EDS - SC-Maglev - LCAE - LCAI
+// Monorail urban induction - Linimo - LBA3, LBAT - TBAI
+// Monorail highspeed induction - SUMA - LCA3 - TCAI
+// Monorail highspeed synchronous - Transrapid - LCAT - TCAS
+// Monorail highspeed synchronous - Maglev 3.0 - TBAS
+//Compatibility	
+//Labels
+//Overwrites stock maglev rail.
+//GFX:
+spriteset (HSM_tunnel_overlay_1, "grf/HSM_Tunnel.png") {
+ tmpl_tunnel_overlays(0)
+}
+spriteset (HSM_tunnel_overlay_2, "grf/HSM_Tunnel_2.png") {
+ tmpl_tunnel_overlays(0)
+}
+switch(FEAT_RAILTYPES, SELF, sw_HSM_tunnel_overlay_2, grf_future_status("EN\10\02")) {
+ 1: HSM_tunnel_overlay_2;
+ 0: HSM_tunnel_overlay_1;
+}
+switch(FEAT_RAILTYPES, SELF, sw_HSM_tunnel_overlay_1, grf_current_status("EN\10\02")) {
+ 1: HSM_tunnel_overlay_2;
+ 0: sw_HSM_tunnel_overlay_2;
+}
+switch(FEAT_RAILTYPES, SELF, HSM_tunnel_overlay, PARAM_BRICK_TUNNEL) {
+ 1: HSM_tunnel_overlay_2;
+ 0: sw_HSM_tunnel_overlay_1;
+}
+spriteset (UM_tunnel_overlay, "grf/LSM_Tunnel.png") {
+ tmpl_tunnel_overlays(0)
+}
+spriteset (HSM_fences, "grf/Fences.png") {
+ tmpl_fences(50)
+}
+spriteset (UM_fences, "grf/Fences.png") {
+ tmpl_fences(0)
+}
+spriteset (NO_fences, "grf/Fences.png") {
+ tmpl_no_fences()
+}
+switch(FEAT_RAILTYPES, SELF, switch_NO_HSM_FENCE, PARAM_NO_FENCE){
+ 0..1: NO_fences;
+ 2..3: HSM_fences;
+}
+switch(FEAT_RAILTYPES, SELF, switch_NO_UM_FENCE, PARAM_NO_FENCE){
+ 0: NO_fences;
+ 1: UM_fences;
+ 2: NO_fences;
+ 3: UM_fences;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAS_depot, PARAM_CC){
+ 1: TCAS_depot;
+ 0: TCAS_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_depot, PARAM_CC){
+ 1: LCAI_depot;
+ 0: LCAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TCAI_depot, PARAM_CC){
+ 1: TCAI_depot;
+ 0: TCAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_depot, PARAM_CC){
+ 1: TBAI_depot;
+ 0: TBAI_depot_nocc;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_depot, PARAM_CC){
+ 1: LBAS_depot;
+ 0: LBAS_depot_nocc;
+}
+ //TCAS
+spriteset (TCAS_underlay, "grf/TCAS.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TCAS_overlay, "grf/TCAS.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (TCAS_bridge, "grf/TCAS.png") {
+ tmpl_bridges_overlay()
+}
+spriteset (TCAS_tunnel, "grf/HSM_Tunnel.png") {
+ tmpl_tunnel_overlaytracks(80)
+}
+spriteset (TCAS_gui, "grf/TCAS_GUI.png") {
+ tmpl_gui()
+}
+spriteset (TCAS_depot, "grf/TCAS_Depot.png") {
+ tmpl_depot(0)
+}
+spriteset (TCAS_depot_nocc, "grf/TCAS_Depot_NOCC.png") {
+ tmpl_depot(0)
+}
+switch(FEAT_RAILTYPES, SELF, switch_depot_TCAS, PARAM_DEPOT_TCAS){
+ 1: switch_TCAS_depot;
+ 2: switch_LCAI_depot;
+ 3: switch_TCAI_depot;
+ 4: switch_TBAI_depot;
+ 5: switch_LBAS_depot;
+ 6: CB_FAILED;
+}
+ //LCAI
+spriteset (LCAI_underlay, "grf/LCAI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (LCAI_overlay, "grf/LCAI.png") {
+ tmpl_overlay_track_types_EDS()
+}
+spriteset (LCUI_underlay, "grf/LCUI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (LCUI_overlay, "grf/LCUI.png") {
+ tmpl_overlay_track_types_EDS()
+}
+spriteset (LCAI_bridge, "grf/LCAI.png") {
+ tmpl_bridges_overlay()
+}
+spriteset (LCAI_tunnel, "grf/HSM_Tunnel.png") {
+ tmpl_tunnel_overlaytracks(40)
+}
+spriteset (LCAI_gui, "grf/LCAI_GUI.png") {
+ tmpl_gui()
+}
+spriteset (LCAI_depot, "grf/LCAI_Depot.png") {
+ tmpl_depot(8)
+}
+spriteset (LCAI_depot_nocc, "grf/LCAI_Depot_NOCC.png") {
+ tmpl_depot(8)
+}
+switch(FEAT_RAILTYPES, SELF, switch_depot_LCAI, PARAM_DEPOT_LCAI){
+ 1: switch_TCAS_depot;
+ 2: switch_LCAI_depot;
+ 3: switch_TCAI_depot;
+ 4: switch_TBAI_depot;
+ 5: switch_LBAS_depot;
+ 6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_underlay, PARAM_URBAN_OTHER){
+ 0: LCAI_underlay;
+ 1: LCUI_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LCAI_overlay, PARAM_URBAN_OTHER){
+ 0: LCAI_overlay;
+ 1: LCUI_overlay;
+}
+ //TCAI
+spriteset (TCAI_underlay, "grf/TCAI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TCAI_overlay, "grf/TCAI.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (TCAI_bridge, "grf/TCAI.png") {
+ tmpl_bridges_overlay()
+}
+spriteset (TCAI_tunnel, "grf/HSM_Tunnel.png") {
+ tmpl_tunnel_overlaytracks(120)
+}
+spriteset (TCAI_gui, "grf/TCAI_GUI.png") {
+ tmpl_gui()
+}
+spriteset (TCAI_depot, "grf/TCAI_Depot.png") {
+ tmpl_depot(8)
+}
+spriteset (TCAI_depot_nocc, "grf/TCAI_Depot_NOCC.png") {
+ tmpl_depot(8)
+}
+switch(FEAT_RAILTYPES, SELF, switch_depot_TCAI, PARAM_DEPOT_TCAI){
+ 1: switch_TCAS_depot;
+ 2: switch_LCAI_depot;
+ 3: switch_TCAI_depot;
+ 4: switch_TBAI_depot;
+ 5: switch_LBAS_depot;
+ 6: CB_FAILED;
+}
+ //TBAI
+spriteset (TBAI_underlay, "grf/TBAI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TBAI_overlay, "grf/TBAI.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (TBUI_underlay, "grf/TBUI.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (TBUI_overlay, "grf/TBUI.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (TBAI_bridge, "grf/TBAI.png") {
+ tmpl_bridges_overlay()
+}
+spriteset (TBAI_tunnel, "grf/LSM_Tunnel.png") {
+ tmpl_tunnel_overlaytracks(40)
+}
+spriteset (TBAI_gui, "grf/TBAI_GUI.png") {
+ tmpl_gui()
+}
+spriteset (TBAI_depot, "grf/TBAI_Depot.png") {
+ tmpl_depot(8)
+}
+spriteset (TBAI_depot_nocc, "grf/TBAI_Depot_NOCC.png") {
+ tmpl_depot(8)
+}
+switch(FEAT_RAILTYPES, SELF, switch_depot_TBAI, PARAM_DEPOT_TBAI){
+ 1: switch_TCAS_depot;
+ 2: switch_LCAI_depot;
+ 3: switch_TCAI_depot;
+ 4: switch_TBAI_depot;
+ 5: switch_LBAS_depot;
+ 6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_underlay, PARAM_URBAN){
+ 0: TBAI_underlay;
+ 1: TBUI_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_TBAI_overlay, PARAM_URBAN){
+ 0: TBAI_overlay;
+ 1: TBUI_overlay;
+}
+ //LBAS
+spriteset (LBAS_underlay, "grf/LBAS.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (LBAS_overlay, "grf/LBAS.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (LBUS_underlay, "grf/LBUS.png") {
+ tmpl_underlay_track_types()
+}
+spriteset (LBUS_overlay, "grf/LBUS.png") {
+ tmpl_overlay_track_types()
+}
+spriteset (LBAS_bridge, "grf/LBAS.png") {
+ tmpl_bridges_overlay()
+}
+spriteset (LBAS_tunnel, "grf/LSM_Tunnel.png") {
+ tmpl_tunnel_overlaytracks(80)
+}
+spriteset (LBAS_gui, "grf/LBAS_GUI.png") {
+ tmpl_gui()
+}
+spriteset (LBAS_depot, "grf/LBAS_Depot.png") {
+ tmpl_depot(8)
+}
+spriteset (LBAS_depot_nocc, "grf/LBAS_Depot_NOCC.png") {
+ tmpl_depot(8)
+}
+switch(FEAT_RAILTYPES, SELF, switch_depot_LBAS, PARAM_DEPOT_LBAS){
+ 1: switch_TCAS_depot;
+ 2: switch_LCAI_depot;
+ 3: switch_TCAI_depot;
+ 4: switch_TBAI_depot;
+ 5: switch_LBAS_depot;
+ 6: CB_FAILED;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_underlay, PARAM_URBAN){
+ 0: LBAS_underlay;
+ 1: LBUS_underlay;
+}
+switch(FEAT_RAILTYPES, SELF, switch_LBAS_overlay, PARAM_URBAN){
+ 0: LBAS_overlay;
+ 1: LBUS_overlay;
+}
+//Tracktypes
+if (PARAM_MGLV == 1 && PARAM_TCAS == 1) {
+//Transrapid Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label: "MGLV";
+         name: string(STR_TCAS);
+         menu_text: string(STR_TCAS);
+         build_window_caption: string(STR_TCAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_TCAS_AUTOREPLACE);
+         new_engine_text: string(STR_TCAS_NEW_ENGINE);
+   toolbar_caption: string(STR_TCAS_TB_CAPTION);
+         compatible_railtype_list: ["MGLV", "LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+         powered_railtype_list: ["MGLV", "LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+   alternative_railtype_list: ["MGLV", "LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: TCAS_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TCAS_bridge; // defines the overlay drawn over bridges
+   tunnels: TCAS_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TCAS; // defines the depot sprites
+   gui: TCAS_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+} else if (PARAM_TCAS == 1) {
+//Transrapid Maglev Track
+item(FEAT_RAILTYPES, TCAT, 15) {
+     property {
+         label: "TCAS";
+         name: string(STR_TCAS);
+         menu_text: string(STR_TCAS);
+         build_window_caption: string(STR_TCAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_TCAS_AUTOREPLACE);
+         new_engine_text: string(STR_TCAS_NEW_ENGINE);
+   toolbar_caption: string(STR_TCAS_TB_CAPTION);
+         compatible_railtype_list: ["LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+         powered_railtype_list: ["LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+   alternative_railtype_list: ["LCAT", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: TCAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: TCAS_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TCAS_bridge; // defines the overlay drawn over bridges
+   tunnels: TCAS_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TCAS; // defines the depot sprites
+   gui: TCAS_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+}
+if (PARAM_MGLV == 2 && PARAM_LCAI == 1) {
+//Transrapid Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label: "MGLV";
+         name: string(STR_LCAI);
+         menu_text: string(STR_LCAI);
+         build_window_caption: string(STR_LCAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_LCAI_AUTOREPLACE);
+         new_engine_text: string(STR_LCAI_NEW_ENGINE);
+   toolbar_caption: string(STR_LCAI_TB_CAPTION);
+         compatible_railtype_list: ["MGLV", "LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+         powered_railtype_list: ["MGLV", "LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+   alternative_railtype_list: ["MGLV", "LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: switch_LCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_LCAI_underlay; // defines the usual tracks and the underlay for junctions	
+         bridge_surfaces: LCAI_bridge; // defines the overlay drawn over bridges
+   tunnels: LCAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_LCAI; // defines the depot sprites
+   gui: LCAI_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+} else if (PARAM_LCAI == 1) {
+//SC Maglev Track
+item(FEAT_RAILTYPES, LCAI, 14) {
+     property {
+         label: "LCAI";
+         name: string(STR_LCAI);
+         menu_text: string(STR_LCAI);
+         build_window_caption: string(STR_LCAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_LCAI_AUTOREPLACE);
+         new_engine_text: string(STR_LCAI_NEW_ENGINE);
+   toolbar_caption: string(STR_LCAI_TB_CAPTION);
+         compatible_railtype_list: ["LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+         powered_railtype_list: ["LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+   alternative_railtype_list: ["LCAE", "LCAI", "LCBI", "LCCI", "LCDI", "LCEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV;
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048;
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV;
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12;
+     }
+     graphics {
+         track_overlay: switch_LCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_LCAI_underlay; // defines the usual tracks and the underlay for junctions	
+         bridge_surfaces: LCAI_bridge;
+   tunnels: LCAI_tunnel; // Custom Tunnel portals since v2
+         depots: switch_depot_LCAI; // Custom Depots
+   gui: LCAI_gui;
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2		 
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+}
+if (PARAM_MGLV == 3 && PARAM_TCAI == 1) {
+//Transrapid Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label: "MGLV";
+         name: string(STR_TCAI);
+         menu_text: string(STR_TCAI);
+         build_window_caption: string(STR_TCAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_TCAI_AUTOREPLACE);
+         new_engine_text: string(STR_TCAI_NEW_ENGINE);
+   toolbar_caption: string(STR_TCAI_TB_CAPTION);
+         compatible_railtype_list: ["MGLV", "TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         powered_railtype_list: ["MGLV", "LBA3", "TAAI", "TBAI", "TCAI", "TABI", "TBBI", "TCBI", "TACI", "TBCI", "TCCI", "TADI", "TBDI", "TCDI", "TAEI", "TBEI", "TCEI"];
+   alternative_railtype_list: ["MGLV", "TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: TCAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TCAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TCAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TCAI; // defines the depot sprites
+   gui: TCAI_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+} else if (PARAM_TCAI == 1) {
+ if (PARAM_MGLV == 4) {
+//SUMA Maglev Track
+item(FEAT_RAILTYPES, TCAI, 13) {
+     property {
+         label: "TCAI";
+         name: string(STR_TCAI);
+         menu_text: string(STR_TCAI);
+         build_window_caption: string(STR_TCAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_TCAI_AUTOREPLACE);
+         new_engine_text: string(STR_TCAI_NEW_ENGINE);
+   toolbar_caption: string(STR_TCAI_TB_CAPTION);
+         compatible_railtype_list: ["TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         powered_railtype_list: ["MGLV", "LBA3", "TAAI", "TBAI", "TCAI", "TABI", "TBBI", "TCBI", "TACI", "TBCI", "TCCI", "TADI", "TBDI", "TCDI", "TAEI", "TBEI", "TCEI"];
+   alternative_railtype_list: ["TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: TCAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TCAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TCAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TCAI; // defines the depot sprites
+   gui: TCAI_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+ } else {
+//SUMA Maglev Track
+item(FEAT_RAILTYPES, TCAI, 13) {
+     property {
+         label: "TCAI";
+         name: string(STR_TCAI);
+         menu_text: string(STR_TCAI);
+         build_window_caption: string(STR_TCAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_TCAI_AUTOREPLACE);
+         new_engine_text: string(STR_TCAI_NEW_ENGINE);
+   toolbar_caption: string(STR_TCAI_TB_CAPTION);
+         compatible_railtype_list: ["TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         powered_railtype_list: ["LBA3", "TAAI", "TBAI", "TCAI", "TABI", "TBBI", "TCBI", "TACI", "TBCI", "TCCI", "TADI", "TBDI", "TCDI", "TAEI", "TBEI", "TCEI"];
+   alternative_railtype_list: ["TCAI", "TCBI", "TCCI", "TCDI", "TCEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 165;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_HS_CONST == 0) ? 2048/4 : (PARAM_HS_CONST == 1) ? 2048/2 : (PARAM_HS_CONST == 3) ? 2048*2 : (PARAM_HS_CONST == 4) ? 2048*4 : 2048; // IDK I'll see
+         speed_limit: 1230 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_HS_MAINT == 0) ? 12/4 : (PARAM_HS_MAINT == 1) ? 12/2 : (PARAM_HS_MAINT == 3) ? 12*2 : (PARAM_HS_MAINT == 4) ? 12*4 : 12; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: TCAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: TCAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TCAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TCAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TCAI; // defines the depot sprites
+   gui: TCAI_gui; // defines the gui sprites
+   tunnel_overlay: HSM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_HSM_FENCE; // Custom Fences since v2
+     }
+ }
+ }
+}
+if (PARAM_MGLV == 4 && PARAM_TBAI == 1) {
+//Urban Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label: "MGLV";
+         name: string(STR_TBAI);
+         menu_text: string(STR_TBAI);
+         build_window_caption: string(STR_TBAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_TBAI_AUTOREPLACE);
+         new_engine_text: string(STR_TBAI_NEW_ENGINE);
+   toolbar_caption: string(STR_TBAI_TB_CAPTION);
+         compatible_railtype_list: ["MGLV", "LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+         powered_railtype_list: ["MGLV", "LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+   alternative_railtype_list: ["MGLV", "LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: switch_TBAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TBAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TBAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TBAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TBAI; // defines the depot sprites
+   gui: TBAI_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+} else if (PARAM_TBAI == 1) {
+//Urban Maglev Track
+item(FEAT_RAILTYPES, TBAI, 9) {
+     property {
+         label: "TBAI";
+         name: string(STR_TBAI);
+         menu_text: string(STR_TBAI);
+         build_window_caption: string(STR_TBAI_BUILD_CAPTION);
+         autoreplace_text: string(STR_TBAI_AUTOREPLACE);
+         new_engine_text: string(STR_TBAI_NEW_ENGINE);
+   toolbar_caption: string(STR_TBAI_TB_CAPTION);
+         compatible_railtype_list: ["LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+         powered_railtype_list: ["LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+   alternative_railtype_list: ["LBA3", "TAAI", "TBAI", "TABI", "TBBI", "TACI", "TBCI", "TADI", "TBDI", "TAEI", "TBEI"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: switch_TBAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TBAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TBAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TBAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TBAI; // defines the depot sprites
+   gui: TBAI_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+}
+if (PARAM_MGLV == 5 && PARAM_LBAS == 1) {
+//MBAHN Maglev Track
+item(FEAT_RAILTYPES, MGLV, 4) {
+     property {
+         label: "MGLV";
+         name: string(STR_LBAS);
+         menu_text: string(STR_LBAS);
+         build_window_caption: string(STR_LBAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_LBAS_AUTOREPLACE);
+         new_engine_text: string(STR_LBAS_NEW_ENGINE);
+   toolbar_caption: string(STR_LBAS_TB_CAPTION);
+         compatible_railtype_list: ["MGLV", "LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+         powered_railtype_list: ["MGLV", "LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+   alternative_railtype_list: ["MGLV", "LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: switch_LBAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_LBAS_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: LBAS_bridge; // defines the overlay drawn over bridges
+   tunnels: LBAS_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_LBAS; // defines the depot sprites
+   gui: LBAS_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+} else if (PARAM_LBAS == 1) {
+//MBAHN Maglev Track
+item(FEAT_RAILTYPES, LBAS, 11) {
+     property {
+         label: "LBAS";
+         name: string(STR_LBAS);
+         menu_text: string(STR_LBAS);
+         build_window_caption: string(STR_LBAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_LBAS_AUTOREPLACE);
+         new_engine_text: string(STR_LBAS_NEW_ENGINE);
+   toolbar_caption: string(STR_LBAS_TB_CAPTION);
+         compatible_railtype_list: ["LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+         powered_railtype_list: ["LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+   alternative_railtype_list: ["LAAT", "LAAS", "LABS", "LACS", "LADS", "LAES", "LBAS", "LBBS", "LBCS", "LBDS", "LBES", "LCAS", "LCBS", "LCCS", "LCDS", "LCES"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {
+         track_overlay: switch_LBAS_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_LBAS_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: LBAS_bridge; // defines the overlay drawn over bridges
+   tunnels: LBAS_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_LBAS; // defines the depot sprites
+   gui: LBAS_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+}
+if (PARAM_TBAI == 1 || PARAM_TCAS == 1) {
+ if (PARAM_MGLV == 1 || PARAM_MGLV == 4) {
+//Intercity Maglev Track
+item(FEAT_RAILTYPES, TBAS_ID, 7) {
+     property {
+         label: "TBAS";
+         name: string(STR_TBAS);
+         menu_text: string(STR_TBAS);
+         build_window_caption: string(STR_TBAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_TBAS_AUTOREPLACE);
+         new_engine_text: string(STR_TBAS_NEW_ENGINE);
+   toolbar_caption: string(STR_TBAS_TB_CAPTION);
+         compatible_railtype_list: ["TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES"];
+         powered_railtype_list: ["MGLV", "TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES", "LCAT", "LBA3", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET", "TBAI", "TBBI", "TBCI", "TBDI", "TBEI", "TAAI", "TABI", "TACI", "TADI", "TAEI"];
+   alternative_railtype_list: ["TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   railtype_flags: bitmask(2);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {//uses TBAI for now
+         track_overlay: switch_TBAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TBAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TBAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TBAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TBAI; // defines the depot sprites
+   gui: TBAI_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+ } else {
+//Intercity Maglev Track
+item(FEAT_RAILTYPES, TBAS_ID, 7) {
+     property {
+         label: "TBAS";
+         name: string(STR_TBAS);
+         menu_text: string(STR_TBAS);
+         build_window_caption: string(STR_TBAS_BUILD_CAPTION);
+         autoreplace_text: string(STR_TBAS_AUTOREPLACE);
+         new_engine_text: string(STR_TBAS_NEW_ENGINE);
+   toolbar_caption: string(STR_TBAS_TB_CAPTION);
+         compatible_railtype_list: ["TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES"];
+         powered_railtype_list: ["TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES", "LCAT", "LBA3", "TCAS", "TCBS", "TCCS", "TCDS", "TCES", "TCAT", "TCBT", "TCCT", "TCDT", "TCET", "TBAI", "TBBI", "TBCI", "TBDI", "TBEI", "TAAI", "TABI", "TACI", "TADI", "TAEI"];
+   alternative_railtype_list: ["TBAT", "TBBT", "TBCT", "TBDT", "TBET", "TBAS", "TBBS", "TBCS", "TBDS", "TBES"];
+         railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+   railtype_flags: bitmask(2);
+   //introduction_date:			 date(1970,1,1);
+   map_colour: 174;
+         curve_speed_multiplier: 3;
+         station_graphics: RAILTYPE_STATION_MAGLEV; // It's a maglev innit
+         construction_cost: (PARAM_MS_CONST == 0) ? 1024/4 : (PARAM_MS_CONST == 1) ? 1024/2 : (PARAM_MS_CONST == 3) ? 1024*2 : (PARAM_MS_CONST == 4) ? 1024*4 : 1024; // IDK I'll see
+         speed_limit: 210 km/h;
+         acceleration_model: ACC_MODEL_MAGLEV; // It's a maglev innit
+   maintenance_cost: (PARAM_MS_MAINT == 0) ? 7/4 : (PARAM_MS_MAINT == 1) ? 7/2 : (PARAM_MS_MAINT == 3) ? 7*2 : (PARAM_MS_MAINT == 4) ? 7*4 : 7; // Maglev rail needs barely any maintenance
+     }
+     graphics {//uses TBAI for now
+         track_overlay: switch_TBAI_overlay; // defines the sprites drawn as overlay for junctions and highlight
+         underlay: switch_TBAI_underlay; // defines the usual tracks and the underlay for junctions
+         bridge_surfaces: TBAI_bridge; // defines the overlay drawn over bridges
+   tunnels: TBAI_tunnel; // defines the tracks drawn on a funnel tile
+         depots: switch_depot_TBAI; // defines the depot sprites
+   gui: TBAI_gui; // defines the gui sprites
+   tunnel_overlay: UM_tunnel_overlay; // Custom Tunnel portals since v2
+         fences: switch_NO_UM_FENCE; // Custom Fences since v2
+     }
+ }
+ }
+}
+//cd /mnt/c/Temp/MTS2
