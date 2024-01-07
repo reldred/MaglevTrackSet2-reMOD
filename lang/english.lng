@@ -6,37 +6,37 @@ STR_GRF_NAME	:Maglev Track Set 2.6 reMOD
 STR_GRF_DESC	:This set is the second installment of the Maglev Track Set, a track set that allows the user to separate their various maglev trains on different types of tracks for extra realism. {}{BLACK} {}{COPYRIGHT}2018-2022 Erato Nysiad{}Additional modifications 2023-2024 by reldred{}Urban ground from the JapanSet crew.{}License:GPL v2
 
 # Track strings
-STR_LBAS				:M-Bahn
+STR_LBAS				:M-Bahn{WHITE}
 STR_LBAS_BUILD_CAPTION	:New M-Bahn Vehicles
 STR_LBAS_AUTOREPLACE	:M-Bahn Vehicles
 STR_LBAS_NEW_ENGINE		:M-Bahn
 STR_LBAS_TB_CAPTION		:M-Bahn
 
-STR_TCAS 				:Transrapid Maglev
+STR_TCAS 				:Transrapid Maglev{WHITE}
 STR_TCAS_BUILD_CAPTION :New Transrapid Maglev Vehicles
 STR_TCAS_AUTOREPLACE 	:Transrapid Maglev Vehicles
 STR_TCAS_NEW_ENGINE 	:Transrapid maglev
 STR_TCAS_TB_CAPTION 	:Transrapid Maglev
 
-STR_TBAI 				:Urban Maglev
+STR_TBAI 				:Urban Maglev{WHITE}
 STR_TBAI_BUILD_CAPTION :New Urban Maglev Vehicles
 STR_TBAI_AUTOREPLACE 	:Urban Maglev Vehicles
 STR_TBAI_NEW_ENGINE 	:Urban maglev
 STR_TBAI_TB_CAPTION 	:Urban Maglev
 
-STR_TBAS 				:Intercity Maglev
+STR_TBAS 				:Intercity Maglev{WHITE}
 STR_TBAS_BUILD_CAPTION :New Intercity Maglev Vehicles
 STR_TBAS_AUTOREPLACE 	:Intercity Maglev Vehicles
 STR_TBAS_NEW_ENGINE 	:Intercity maglev
 STR_TBAS_TB_CAPTION 	:Intercity Maglev
 
-STR_TCAI 				:SUMA Maglev
+STR_TCAI 				:SUMA Maglev{WHITE}
 STR_TCAI_BUILD_CAPTION :New SUMA Maglev Vehicles
 STR_TCAI_AUTOREPLACE 	:SUMA Maglev Vehicles
 STR_TCAI_NEW_ENGINE 	:SUMA maglev
 STR_TCAI_TB_CAPTION 	:SUMA Maglev
 
-STR_LCAI 				:SC-Maglev
+STR_LCAI 				:SC-Maglev{WHITE}
 STR_LCAI_BUILD_CAPTION  :New SC-Maglev Vehicles
 STR_LCAI_AUTOREPLACE 	:SC-Maglev Vehicles
 STR_LCAI_NEW_ENGINE 	:SC-Maglev
